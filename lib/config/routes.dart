@@ -2,6 +2,7 @@ import 'package:ecommmerce/config/app_routes.dart';
 import 'package:ecommmerce/features/authentication/on_boarding/screens/on_boarding.screen.dart';
 import 'package:ecommmerce/features/authentication/sign_in/screens/sign_in.screen.dart';
 import 'package:ecommmerce/features/authentication/sign_up/screens/sign_up.screen.dart';
+import 'package:ecommmerce/utils/core/middlewares/init.middleware.dart';
 import 'package:get/get.dart';
 
 Transition routeTransition = Transition.rightToLeft;
@@ -11,6 +12,7 @@ List<GetPage<dynamic>>? getPages = [
   GetPage(
     name: AppRoutes.onBoarding,
     page: () => const OnBoardingScreen(),
+    middlewares: [InitialMiddleware()],
     transition: routeTransition,
   ),
 

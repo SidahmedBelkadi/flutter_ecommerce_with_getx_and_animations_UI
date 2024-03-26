@@ -20,6 +20,7 @@ dependencies:
   get: ^4.6.6
   flutter_screenutil: ^5.9.0
   toastification: ^1.2.1
+  shared_preferences: ^2.2.2
 
 dev_dependencies:
   flutter_test:
