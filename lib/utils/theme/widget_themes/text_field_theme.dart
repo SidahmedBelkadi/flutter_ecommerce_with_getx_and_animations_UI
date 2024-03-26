@@ -39,11 +39,11 @@ class CustomTextFormFieldTheme {
     ),
     errorBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(AppSizes.inputFieldRadius.sp),
-      borderSide: const BorderSide(width: 1, color: AppColors.warning),
+      borderSide: const BorderSide(width: 1, color: AppColors.error),
     ),
     focusedErrorBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(AppSizes.inputFieldRadius.sp),
-      borderSide: const BorderSide(width: 2, color: AppColors.warning),
+      borderSide: const BorderSide(width: 2, color: Colors.red),
     ),
   );
 
@@ -57,6 +57,11 @@ class CustomTextFormFieldTheme {
         .copyWith(fontSize: AppSizes.fontSizeMd.sp, color: AppColors.white),
     hintStyle: const TextStyle()
         .copyWith(fontSize: AppSizes.fontSizeSm.sp, color: AppColors.white),
+    errorStyle: const TextStyle().copyWith(
+      fontStyle: FontStyle.normal,
+      fontSize: 12.sp,
+      color: AppColors.error,
+    ),
     floatingLabelStyle:
         const TextStyle().copyWith(color: AppColors.white.withOpacity(0.8)),
     border: const OutlineInputBorder().copyWith(
@@ -73,11 +78,11 @@ class CustomTextFormFieldTheme {
     ),
     errorBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(AppSizes.inputFieldRadius.sp),
-      borderSide: const BorderSide(width: 1, color: AppColors.warning),
+      borderSide: const BorderSide(width: 1, color: AppColors.error),
     ),
     focusedErrorBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(AppSizes.inputFieldRadius.sp),
-      borderSide: const BorderSide(width: 2, color: AppColors.warning),
+      borderSide: const BorderSide(width: 2, color: Colors.red),
     ),
   );
 }

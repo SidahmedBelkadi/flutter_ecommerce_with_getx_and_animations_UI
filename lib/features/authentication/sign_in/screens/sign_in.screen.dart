@@ -1,3 +1,4 @@
+import 'package:ecommmerce/features/authentication/sign_in/controllers/sign_in.controller.dart';
 import 'package:ecommmerce/features/authentication/sign_in/screens/widgets/sign_in_form.dart';
 import 'package:ecommmerce/features/authentication/sign_in/screens/widgets/sign_in_header.dart';
 import 'package:ecommmerce/utils/constants/app_sizes.dart';
@@ -10,6 +11,7 @@ class SignInScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Get.put(SignInController());
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(

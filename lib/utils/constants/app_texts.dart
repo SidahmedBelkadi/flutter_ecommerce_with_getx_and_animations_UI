@@ -23,4 +23,14 @@ class AppTexts {
   static const forgetPassword = "Forget Password ?";
   static const signIn = "SignIn";
   static const createAccount = "Create Account";
+
+  // ============= Sign Up ================= //
+  static const signUpHeader = "Let's create your account";
+  static const labelUserName = "Username";
+  static const labelPhoneN = "Phone Number";
+  static const labelPasswordConfirmation = "Password Confirmation";
+  static const iAgreeTo = "I agree to";
+  static const privacyPolicy = "Privacy Policy";
+  static const and = "and";
+  static const termsOfUse = "Terms of use";
 }

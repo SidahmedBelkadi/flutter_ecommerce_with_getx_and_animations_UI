@@ -11,6 +11,7 @@ class AppTextFormField extends StatelessWidget {
     required this.validator,
     this.textInputType = TextInputType.text,
     this.onObsecureIconTap,
+    this.onIconTap,
   });
 
   final String labelText;
@@ -21,6 +22,7 @@ class AppTextFormField extends StatelessWidget {
   final TextEditingController textEditingController;
   final TextInputType textInputType;
   final String? Function(String?) validator;
+  final VoidCallback? onIconTap;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +35,7 @@ class AppTextFormField extends StatelessWidget {
       decoration: InputDecoration(
         labelText: labelText,
         prefixIcon: Icon(prefixIcon),
-        suffixIcon: Icon(suffixIcon),
+        suffixIcon: GestureDetector(onTap: onIconTap, child: Icon(suffixIcon)),
       ),
     );
   }
