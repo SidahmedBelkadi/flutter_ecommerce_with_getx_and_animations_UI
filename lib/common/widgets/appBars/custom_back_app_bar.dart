@@ -8,11 +8,15 @@ import '../../../utils/constants/app_sizes.dart';
 class CustomSimpleBackAppBar extends StatelessWidget implements PreferredSize {
   const CustomSimpleBackAppBar({
     super.key,
+    this.title,
   });
+
+  final String? title;
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      title: Text(title ?? ""),
       automaticallyImplyLeading: false,
       actions: [
         IconButton(

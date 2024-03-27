@@ -33,7 +33,7 @@ class SignUpForm extends GetView<SignUpController> {
               max: 30,
             ),
           ),
-          SizedBox(height: AppSizes.spaceBtwItems.h),
+          SizedBox(height: AppSizes.spaceBtwInputFields.h),
           AppTextFormField(
             labelText: AppTexts.labelEmail,
             prefixIcon: Icons.email,
@@ -47,7 +47,7 @@ class SignUpForm extends GetView<SignUpController> {
               max: 50,
             ),
           ),
-          SizedBox(height: AppSizes.spaceBtwItems.h),
+          SizedBox(height: AppSizes.spaceBtwInputFields.h),
           AppTextFormField(
               labelText: AppTexts.labelPhoneN,
               prefixIcon: Icons.phone,
@@ -60,7 +60,7 @@ class SignUpForm extends GetView<SignUpController> {
                     min: 9,
                     max: 11,
                   )),
-          SizedBox(height: AppSizes.spaceBtwItems.h),
+          SizedBox(height: AppSizes.spaceBtwInputFields.h),
           Obx(
             () => Column(
               children: [
@@ -83,7 +83,7 @@ class SignUpForm extends GetView<SignUpController> {
                     min: 8,
                   ),
                 ),
-                SizedBox(height: AppSizes.spaceBtwItems.h),
+                SizedBox(height: AppSizes.spaceBtwInputFields.h),
                 AppTextFormField(
                   labelText: AppTexts.labelPasswordConfirmation,
                   prefixIcon: Icons.key,

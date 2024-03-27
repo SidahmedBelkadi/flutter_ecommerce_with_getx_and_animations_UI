@@ -33,4 +33,16 @@ class AppTexts {
   static const privacyPolicy = "Privacy Policy";
   static const and = "and";
   static const termsOfUse = "Terms of use";
+
+// ============= Forget Password ================= //
+  static const forgetPasswordHeader =
+      "Please enter your email and we will send you a link to return your account.";
+  static const verifyEmail = "Verify Email";
+
+  // ============= Forget Password OTP verification ================= //
+  static const forgotPasswordOtpHeader = "Please enter the code sent to";
+
+  // ============= Success ================= //
+  static const successHeader =
+      "Congrats!, You have successfully reset your password.";
 }

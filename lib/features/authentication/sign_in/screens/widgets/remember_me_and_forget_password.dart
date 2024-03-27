@@ -1,3 +1,4 @@
+import 'package:ecommmerce/config/app_routes.dart';
 import 'package:ecommmerce/features/authentication/sign_in/controllers/sign_in.controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -37,7 +38,7 @@ class RememberMeAndForgetPasswordRow extends GetView<SignInController> {
           ],
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: () => Get.toNamed(AppRoutes.forgetPassword),
           child: const Text(
             AppTexts.forgetPassword,
             style: TextStyle(

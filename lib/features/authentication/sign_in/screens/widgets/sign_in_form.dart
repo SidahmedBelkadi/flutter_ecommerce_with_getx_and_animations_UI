@@ -26,7 +26,7 @@ class SignInForm extends GetView<SignInController> {
           AppTextFormField(
             labelText: AppTexts.labelEmail,
             prefixIcon: Icons.email,
-            textEditingController: TextEditingController(),
+            textEditingController: controller.email,
             textInputType: TextInputType.emailAddress,
             validator: (value) => AppValidation.validateInput(
               value: value!,
@@ -36,7 +36,7 @@ class SignInForm extends GetView<SignInController> {
               max: 50,
             ),
           ),
-          SizedBox(height: AppSizes.spaceBtwItems.h),
+          SizedBox(height: AppSizes.spaceBtwInputFields.h),
           Obx(
             () => AppTextFormField(
               labelText: AppTexts.labelPassword,
