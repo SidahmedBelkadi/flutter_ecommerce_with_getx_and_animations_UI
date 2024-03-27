@@ -16,7 +16,7 @@ class SignUpScreen extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(AppSizes.defaultSpace),
+            padding: EdgeInsets.all(AppSizes.defaultSpace.sp),
             child: SizedBox(
               width: double.infinity,
               child: Column(

@@ -1,4 +1,4 @@
-import 'package:ecommmerce/config/app_routes.dart';
+import 'package:ecommmerce/config/routing/app_routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:toastification/toastification.dart';

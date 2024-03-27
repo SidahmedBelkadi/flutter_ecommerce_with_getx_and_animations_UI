@@ -5,6 +5,7 @@ import 'package:ecommmerce/features/authentication/on_boarding/screens/widgets/o
 import 'package:ecommmerce/utils/constants/app_sizes.dart';
 import 'package:ecommmerce/utils/constants/app_texts.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class OnBoardingScreen extends StatelessWidget {
@@ -17,7 +18,7 @@ class OnBoardingScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(AppSizes.defaultSpace),
+          padding: EdgeInsets.all(AppSizes.defaultSpace.sp),
           child: Column(
             children: [
               // Page View Slider with images

@@ -3,7 +3,7 @@ import 'package:ecommmerce/utils/helpers/shared_preferences.helper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-import '../../../config/app_routes.dart';
+import '../../../config/routing/app_routes.dart';
 
 class InitialMiddleware extends GetMiddleware {
   @override

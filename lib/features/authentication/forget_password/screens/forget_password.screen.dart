@@ -24,7 +24,7 @@ class ForgetPasswordScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(AppSizes.defaultSpace),
+          padding: EdgeInsets.all(AppSizes.defaultSpace.sp),
           child: SizedBox(
             height: Get.height,
             width: double.infinity,

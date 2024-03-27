@@ -1,6 +1,6 @@
 import 'package:ecommmerce/common/screens/success.screen.dart';
 import 'package:ecommmerce/common/widgets/appBars/custom_back_app_bar.dart';
-import 'package:ecommmerce/config/app_routes.dart';
+import 'package:ecommmerce/config/routing/app_routes.dart';
 import 'package:ecommmerce/utils/constants/app_sizes.dart';
 import 'package:ecommmerce/utils/constants/app_texts.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +22,7 @@ class SignUpOtpVerificationScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(AppSizes.defaultSpace),
+          padding: EdgeInsets.all(AppSizes.defaultSpace.sp),
           child: SizedBox(
             width: double.infinity,
             child: Column(

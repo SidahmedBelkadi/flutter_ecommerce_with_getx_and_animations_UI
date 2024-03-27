@@ -1,4 +1,4 @@
-import 'package:ecommmerce/config/app_routes.dart';
+import 'package:ecommmerce/config/routing/app_routes.dart';
 import 'package:ecommmerce/data/static/data.dart';
 import 'package:ecommmerce/utils/helpers/shared_preferences.helper.dart';
 import 'package:flutter/cupertino.dart';

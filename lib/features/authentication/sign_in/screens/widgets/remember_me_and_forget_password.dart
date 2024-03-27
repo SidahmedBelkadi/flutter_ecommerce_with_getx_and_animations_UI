@@ -1,4 +1,4 @@
-import 'package:ecommmerce/config/app_routes.dart';
+import 'package:ecommmerce/config/routing/app_routes.dart';
 import 'package:ecommmerce/features/authentication/sign_in/controllers/sign_in.controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

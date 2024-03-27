@@ -7,4 +7,9 @@ class AppRoutes {
   static const forgetPassword = "/forget_password";
   static const forgetPasswordOtpVerification = "/forget_password_otp";
   static const signUpVerification = "/sign_up_otp";
+  static const main = "/main";
+  static const home = "/home";
+  static const store = "/store";
+  static const wishlist = "/wishlist";
+  static const profile = "/profile";
 }

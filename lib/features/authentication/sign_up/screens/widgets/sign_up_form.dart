@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 import '../../../../../common/widgets/auth/app_text_field.dart';
 import '../../../../../common/widgets/buttons/custom_elevated_button.dart';
 import '../../../../../common/widgets/buttons/outlined_button.dart';
-import '../../../../../config/app_routes.dart';
+import '../../../../../config/routing/app_routes.dart';
 import '../../../../../utils/constants/app_sizes.dart';
 import '../../../../../utils/constants/app_texts.dart';
 import '../../../../../utils/validators/app_validator.dart';

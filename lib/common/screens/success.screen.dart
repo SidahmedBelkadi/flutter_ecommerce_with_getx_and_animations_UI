@@ -15,7 +15,7 @@ class SuccessScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(AppSizes.defaultSpace),
+          padding: EdgeInsets.all(AppSizes.defaultSpace.sp),
           child: SizedBox(
             width: double.infinity,
             child: Column(

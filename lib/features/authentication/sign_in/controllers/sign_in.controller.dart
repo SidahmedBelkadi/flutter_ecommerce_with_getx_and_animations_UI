@@ -1,7 +1,7 @@
+import 'package:ecommmerce/config/routing/app_routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:toastification/toastification.dart';
 
 class SignInController extends GetxController {
   static SignInController get instance => Get.find<SignInController>();
@@ -24,23 +24,25 @@ class SignInController extends GetxController {
   void signIn(BuildContext context) {
     // ---- Two Steps of validation
     // Step 01:
-    if (email.text == "" || password.text == "") {
-      toastification.show(
-        context: context,
-        title: const Text('Oops!'),
-        description: const Text("Please fill the form correctly."),
-        autoCloseDuration: const Duration(seconds: 5),
-        showProgressBar: false,
-        type: ToastificationType.error,
-        style: ToastificationStyle.flat,
-      );
-      return;
-    }
+    // if (email.text == "" || password.text == "") {
+    //   toastification.show(
+    //     context: context,
+    //     title: const Text('Oops!'),
+    //     description: const Text("Please fill the form correctly."),
+    //     autoCloseDuration: const Duration(seconds: 5),
+    //     showProgressBar: false,
+    //     type: ToastificationType.error,
+    //     style: ToastificationStyle.flat,
+    //   );
+    //   return;
+    // }
 
     // Step 02:
-    FormState? formState = signInFormKey.currentState;
-    if (!formState!.validate()) {
-      return;
-    }
+    // FormState? formState = signInFormKey.currentState;
+    // if (!formState!.validate()) {
+    //   return;
+    // }
+
+    Get.offAllNamed(AppRoutes.main);
   }
 }
