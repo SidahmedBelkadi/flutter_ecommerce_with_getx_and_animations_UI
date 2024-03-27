@@ -45,4 +45,6 @@ class AppTexts {
   // ============= Success ================= //
   static const successHeader =
       "Congrats!, You have successfully reset your password.";
+  static const successOfSignUpHeader =
+      "Congrats!, You have successfully created and confirmed your account, Enjoy !";
 }

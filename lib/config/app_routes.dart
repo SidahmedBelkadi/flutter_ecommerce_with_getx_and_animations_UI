@@ -6,4 +6,5 @@ class AppRoutes {
   static const signUp = "/sign_up";
   static const forgetPassword = "/forget_password";
   static const forgetPasswordOtpVerification = "/forget_password_otp";
+  static const signUpVerification = "/sign_up_otp";
 }

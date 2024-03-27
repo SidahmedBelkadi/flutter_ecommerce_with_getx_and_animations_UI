@@ -27,16 +27,24 @@ class PrivacyPolicyAndTermsOfUse extends GetView<SignUpController> {
           AppTexts.privacyPolicy,
           style: Theme.of(context).textTheme.bodySmall!.apply(
                 decoration: TextDecoration.underline,
+                overflow: TextOverflow.ellipsis,
               ),
         ),
         SizedBox(width: AppSizes.xs.w),
-        const Text(AppTexts.and),
+        const Text(
+          AppTexts.and,
+          style: TextStyle(
+            overflow: TextOverflow.ellipsis,
+          ),
+        ),
         SizedBox(width: AppSizes.xs.w),
-        Text(
-          AppTexts.termsOfUse,
-          style: Theme.of(context).textTheme.bodySmall!.apply(
-                decoration: TextDecoration.underline,
-              ),
+        Flexible(
+          child: Text(
+            AppTexts.termsOfUse,
+            style: Theme.of(context).textTheme.bodySmall!.apply(
+                  decoration: TextDecoration.underline,
+                ),
+          ),
         ),
       ],
     );

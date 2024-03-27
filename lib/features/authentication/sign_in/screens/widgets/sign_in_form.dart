@@ -67,7 +67,7 @@ class SignInForm extends GetView<SignInController> {
           SizedBox(height: AppSizes.spaceBtwItems.h),
           AppOutlinedButton(
             text: AppTexts.createAccount,
-            onPressed: () => Get.toNamed(AppRoutes.signUp),
+            onPressed: () => Get.offNamed(AppRoutes.signUp),
           ),
         ],
       ),

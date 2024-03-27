@@ -6,8 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import '../../../../common/widgets/appBars/custom_back_app_bar.dart';
-
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
 
@@ -15,25 +13,23 @@ class SignUpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Get.put(SignUpController());
     return Scaffold(
-      appBar: const CustomSimpleBackAppBar(),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(AppSizes.defaultSpace),
-          child: SizedBox(
-            height: Get.height,
-            width: double.infinity,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Spacer(),
-                Text(
-                  AppTexts.signUpHeader,
-                  style: Theme.of(context).textTheme.headlineMedium,
-                ),
-                SizedBox(height: AppSizes.spaceBtwSections.h),
-                const SignUpForm(),
-                const Spacer(flex: 3),
-              ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(AppSizes.defaultSpace),
+            child: SizedBox(
+              width: double.infinity,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    AppTexts.signUpHeader,
+                    style: Theme.of(context).textTheme.headlineMedium,
+                  ),
+                  SizedBox(height: AppSizes.spaceBtwSections.h),
+                  const SignUpForm(),
+                ],
+              ),
             ),
           ),
         ),

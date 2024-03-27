@@ -4,6 +4,7 @@ import 'package:ecommmerce/features/authentication/forget_password/screens/forge
 import 'package:ecommmerce/features/authentication/on_boarding/screens/on_boarding.screen.dart';
 import 'package:ecommmerce/features/authentication/sign_in/screens/sign_in.screen.dart';
 import 'package:ecommmerce/features/authentication/sign_up/screens/sign_up.screen.dart';
+import 'package:ecommmerce/features/authentication/sign_up/screens/sign_up_otp.screen.dart';
 import 'package:ecommmerce/utils/core/middlewares/init.middleware.dart';
 import 'package:get/get.dart';
 
@@ -43,6 +44,13 @@ List<GetPage<dynamic>>? getPages = [
   GetPage(
     name: AppRoutes.forgetPasswordOtpVerification,
     page: () => const ForgetPasswordOtpVerificationScreen(),
+    transition: routeTransition,
+  ),
+
+  // ---- Sign Up OTP ----- //
+  GetPage(
+    name: AppRoutes.signUpVerification,
+    page: () => const SignUpOtpVerificationScreen(),
     transition: routeTransition,
   ),
 ];
