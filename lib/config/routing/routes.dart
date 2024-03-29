@@ -1,17 +1,18 @@
 import 'package:ecommmerce/common/screens/main_screen.dart';
 import 'package:ecommmerce/config/routing/app_routes.dart';
-import 'package:ecommmerce/features/authentication/forget_password/screens/forget_password.screen.dart';
-import 'package:ecommmerce/features/authentication/forget_password/screens/forget_password_otp.dart';
-import 'package:ecommmerce/features/authentication/on_boarding/screens/on_boarding.screen.dart';
-import 'package:ecommmerce/features/authentication/sign_in/screens/sign_in.screen.dart';
-import 'package:ecommmerce/features/authentication/sign_up/screens/sign_up.screen.dart';
-import 'package:ecommmerce/features/authentication/sign_up/screens/sign_up_otp.screen.dart';
-import 'package:ecommmerce/features/shop/home/screens/home.screen.dart';
-import 'package:ecommmerce/features/shop/profile/profile.screen.dart';
-import 'package:ecommmerce/features/shop/store/store.screen.dart';
-import 'package:ecommmerce/features/shop/wishlist/wishlist.screen.dart';
 import 'package:ecommmerce/utils/core/middlewares/init.middleware.dart';
 import 'package:get/get.dart';
+
+import '../../features/authentication/screens/forget_password/forget_password.screen.dart';
+import '../../features/authentication/screens/forget_password/forget_password_otp.dart';
+import '../../features/authentication/screens/on_boarding/on_boarding.screen.dart';
+import '../../features/authentication/screens/sign_in/sign_in.screen.dart';
+import '../../features/authentication/screens/sign_up/sign_up.screen.dart';
+import '../../features/authentication/screens/sign_up/sign_up_otp.screen.dart';
+import '../../features/personalization/screens/profile/profile.screen.dart';
+import '../../features/shop/screens/home/home.screen.dart';
+import '../../features/shop/screens/store/store.screen.dart';
+import '../../features/shop/screens/wishlist/wishlist.screen.dart';
 
 Transition routeTransition = Transition.rightToLeft;
 

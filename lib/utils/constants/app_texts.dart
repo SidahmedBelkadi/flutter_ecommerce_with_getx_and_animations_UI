@@ -47,4 +47,9 @@ class AppTexts {
       "Congrats!, You have successfully reset your password.";
   static const successOfSignUpHeader =
       "Congrats!, You have successfully created and confirmed your account, Enjoy !";
+
+  // ============= Home ================= //
+  static const goodDayForShopping = "Good day for shopping";
+  static const categories = "Categories";
+  static const recentProducts = "Recent Products";
 }

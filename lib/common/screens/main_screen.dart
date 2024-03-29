@@ -1,13 +1,13 @@
-import 'package:ecommmerce/features/shop/profile/profile.screen.dart';
-import 'package:ecommmerce/features/shop/store/store.screen.dart';
-import 'package:ecommmerce/features/shop/wishlist/wishlist.screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../../features/shop/home/screens/home.screen.dart';
+import '../../features/personalization/screens/profile/profile.screen.dart';
+import '../../features/shop/screens/home/home.screen.dart';
+import '../../features/shop/screens/store/store.screen.dart';
+import '../../features/shop/screens/wishlist/wishlist.screen.dart';
 import '../../utils/constants/app_sizes.dart';
 
 class MainScreen extends StatelessWidget {
@@ -17,7 +17,6 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(NavigationController());
     final darkMode = Get.isDarkMode;
-    // Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
       bottomNavigationBar: Obx(
@@ -77,7 +76,9 @@ class MainScreen extends StatelessWidget {
           ],
         ),
       ),
-      body: Obx(() => controller.screens[controller.selectedIndex.value]),
+      body: SafeArea(
+        child: Obx(() => controller.screens[controller.selectedIndex.value]),
+      ),
     );
   }
 }

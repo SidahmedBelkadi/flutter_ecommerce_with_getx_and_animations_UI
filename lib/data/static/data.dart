@@ -1,7 +1,7 @@
 import 'package:ecommmerce/utils/constants/app_images.dart';
 import 'package:ecommmerce/utils/constants/app_texts.dart';
 
-import '../../features/authentication/on_boarding/models/on_boarding.model.dart';
+import '../../features/authentication/models/on_boarding/on_boarding.model.dart';
 
 List<OnBoardingModel> onboardingList = [
   OnBoardingModel(
@@ -19,4 +19,15 @@ List<OnBoardingModel> onboardingList = [
     image: AppImages.onBoarding_three,
     body: AppTexts.onBoardingBodyThree,
   ),
+];
+
+List<String> banners = [
+  AppImages.banner1,
+  AppImages.banner2,
+  AppImages.banner3,
+  AppImages.banner4,
+  AppImages.banner5,
+  AppImages.banner6,
+  AppImages.banner7,
+  AppImages.banner8,
 ];
