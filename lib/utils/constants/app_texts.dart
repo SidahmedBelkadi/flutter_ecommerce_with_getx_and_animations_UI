@@ -52,4 +52,10 @@ class AppTexts {
   static const goodDayForShopping = "Good day for shopping";
   static const categories = "Categories";
   static const recentProducts = "Recent Products";
+
+  // ============= WishList ================= //
+  static const wishList = "Wishlist";
+
+  // ============= WishList ================= //
+  static const myCart = "My Cart";
 }

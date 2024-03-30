@@ -1,4 +1,5 @@
 import 'package:badges/badges.dart' as badges;
+import 'package:ecommmerce/config/routing/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -42,7 +43,10 @@ class HeaderAndCartIcon extends StatelessWidget {
           ),
           badgeStyle: badges.BadgeStyle(
               badgeColor: Get.isDarkMode ? AppColors.grey : AppColors.primary),
-          child: const Icon(Iconsax.shopping_cart),
+          child: GestureDetector(
+            onTap: () => Get.toNamed(AppRoutes.cart),
+            child: const Icon(Iconsax.shopping_cart),
+          ),
         )
       ],
     );

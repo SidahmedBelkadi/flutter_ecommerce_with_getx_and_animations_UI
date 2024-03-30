@@ -18,6 +18,7 @@ class CustomSimpleBackAppBar extends StatelessWidget implements PreferredSize {
     return AppBar(
       title: Text(title ?? ""),
       automaticallyImplyLeading: false,
+      centerTitle: false,
       actions: [
         IconButton(
           icon: const Icon(CupertinoIcons.clear),

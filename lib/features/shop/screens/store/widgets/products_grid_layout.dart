@@ -20,7 +20,7 @@ class ProductsGridLayout extends StatelessWidget {
           physics: const NeverScrollableScrollPhysics(),
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            mainAxisExtent: 320.h,
+            mainAxisExtent: 260.h,
             mainAxisSpacing: AppSizes.gridViewSpacing,
             crossAxisSpacing: AppSizes.gridViewSpacing,
           ),

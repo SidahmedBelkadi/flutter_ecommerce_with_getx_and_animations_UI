@@ -1,5 +1,6 @@
 import 'package:ecommmerce/common/screens/main_screen.dart';
 import 'package:ecommmerce/config/routing/app_routes.dart';
+import 'package:ecommmerce/features/shop/screens/cart/cart.screen.dart';
 import 'package:ecommmerce/utils/core/middlewares/init.middleware.dart';
 import 'package:get/get.dart';
 
@@ -92,6 +93,13 @@ List<GetPage<dynamic>>? getPages = [
   GetPage(
     name: AppRoutes.profile,
     page: () => const ProfileScreen(),
+    transition: routeTransition,
+  ),
+
+  // ---- Cart ----- //
+  GetPage(
+    name: AppRoutes.cart,
+    page: () => const CartScreen(),
     transition: routeTransition,
   ),
 ];

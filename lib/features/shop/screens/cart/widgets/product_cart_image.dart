@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../utils/constants/app_sizes.dart';
 
-class CardImage extends StatelessWidget {
-  const CardImage({
+class ProductCartImage extends StatelessWidget {
+  const ProductCartImage({
     super.key,
     required this.image,
   });
@@ -14,14 +14,12 @@ class CardImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: const BorderRadius.only(
-        bottomLeft: Radius.circular(AppSizes.borderRadiusLg),
-        bottomRight: Radius.circular(AppSizes.borderRadiusLg),
-      ),
+      borderRadius: BorderRadius.circular(AppSizes.borderRadiusLg),
       child: Image(
         image: AssetImage(image),
-        height: 160.h,
         fit: BoxFit.fill,
+        height: 80.h,
+        width: 100.h,
       ),
     );
   }
