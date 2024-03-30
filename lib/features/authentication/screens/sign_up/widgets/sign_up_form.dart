@@ -24,9 +24,9 @@ class SignUpForm extends GetView<SignUpController> {
       child: Column(
         children: [
           AppTextFormField(
-            labelText: AppTexts.labelUserName,
+            labelText: AppTexts.fullName,
             prefixIcon: Icons.person,
-            textEditingController: controller.username,
+            textEditingController: controller.fullName,
             validator: (value) => AppValidation.validateInput(
               value: value!,
               type: InputTypes.firstName,

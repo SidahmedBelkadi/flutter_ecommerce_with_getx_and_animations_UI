@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../../features/personalization/screens/profile/profile.screen.dart';
+import '../../features/personalization/screens/account/account.screen.dart';
 import '../../features/shop/screens/home/home.screen.dart';
 import '../../features/shop/screens/store/store.screen.dart';
 import '../../features/shop/screens/wishlist/wishlist.screen.dart';
@@ -71,7 +71,7 @@ class MainScreen extends StatelessWidget {
                   icon: Icon(controller.selectedIndex.value == 3
                       ? Icons.person_2
                       : Iconsax.user),
-                  label: 'Profile'),
+                  label: 'Account'),
             ),
           ],
         ),
@@ -140,7 +140,7 @@ class NavigationController extends GetxController {
     const HomeScreen(),
     const StoreScreen(),
     const WishListScreen(),
-    const ProfileScreen(),
+    const AccountScreen(),
   ];
 
   void onDestinationSelected(value) {

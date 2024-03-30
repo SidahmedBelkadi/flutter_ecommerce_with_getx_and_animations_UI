@@ -30,9 +30,11 @@ class ForgetPasswordScreen extends StatelessWidget {
             width: double.infinity,
             child: Column(
               children: [
-                const Image(
-                  image: AssetImage(AppImages.emailVerification),
+                Image(
+                  image: const AssetImage(AppImages.emailVerification),
                   fit: BoxFit.fill,
+                  height: 240.h,
+                  width: 320.w,
                 ),
                 SizedBox(height: AppSizes.spaceBtwSections.h),
                 Text(

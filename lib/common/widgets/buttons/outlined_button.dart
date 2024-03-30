@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppOutlinedButton extends StatelessWidget {
   const AppOutlinedButton({super.key, required this.text, this.onPressed});
@@ -9,7 +10,7 @@ class AppOutlinedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 55,
+      height: 55.sp,
       width: double.infinity,
       child: OutlinedButton(onPressed: onPressed, child: Text(text)),
     );

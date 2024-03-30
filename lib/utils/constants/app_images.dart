@@ -23,4 +23,7 @@ class AppImages {
 
   //   ===== Product Categories ===== //
   static const laptop = "assets/images/laptop.png";
+
+//   ===== User ===== //
+  static const user = "assets/images/user.jpeg";
 }

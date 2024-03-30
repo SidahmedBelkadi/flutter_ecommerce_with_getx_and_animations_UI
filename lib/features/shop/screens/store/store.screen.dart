@@ -1,6 +1,7 @@
 import 'package:ecommmerce/common/widgets/headers/header_and_cart.dart';
 import 'package:ecommmerce/features/shop/screens/store/widgets/products_grid_layout.dart';
 import 'package:ecommmerce/utils/constants/app_sizes.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -11,23 +12,21 @@ class StoreScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: EdgeInsets.fromLTRB(
-          AppSizes.defaultSpace.sp,
-          AppSizes.md.sp,
-          AppSizes.defaultSpace.sp,
-          AppSizes.defaultSpace.sp,
-        ),
-        child: Column(
-          children: [
-            const HeaderAndCartIcon(),
-            SizedBox(height: AppSizes.spaceBtwSections.h),
-            const SearchBox(),
-            SizedBox(height: AppSizes.spaceBtwSections.h),
-            const ProductsGridLayout()
-          ],
-        ),
+    return Padding(
+      padding: EdgeInsets.fromLTRB(
+        AppSizes.defaultSpace.sp,
+        AppSizes.md.sp,
+        AppSizes.defaultSpace.sp,
+        AppSizes.defaultSpace.sp,
+      ),
+      child: Column(
+        children: [
+          const HeaderAndCartIcon(),
+          SizedBox(height: AppSizes.spaceBtwSections.h),
+          const SearchBox(),
+          SizedBox(height: AppSizes.spaceBtwSections.h),
+          const Expanded(child: ProductsGridLayout())
+        ],
       ),
     );
   }

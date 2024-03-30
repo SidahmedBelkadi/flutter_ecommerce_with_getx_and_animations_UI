@@ -8,7 +8,7 @@ import '../../../../utils/helpers/dialog.helper.dart';
 class SignUpController extends GetxController {
   GlobalKey<FormState> signUpFormKey = GlobalKey<FormState>();
 
-  TextEditingController username = TextEditingController();
+  TextEditingController fullName = TextEditingController();
   TextEditingController email = TextEditingController();
   TextEditingController phoneNumber = TextEditingController();
   TextEditingController password = TextEditingController();
@@ -32,7 +32,7 @@ class SignUpController extends GetxController {
   void signUp(BuildContext context) {
     // ---- Two Steps of validation
     // Step 01:
-    if (username.text == "" ||
+    if (fullName.text == "" ||
         email.text == "" ||
         password.text == "" ||
         phoneNumber.text == "" ||

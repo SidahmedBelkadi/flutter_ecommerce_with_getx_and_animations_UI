@@ -11,6 +11,6 @@ class AppRoutes {
   static const home = "/home";
   static const store = "/store";
   static const wishlist = "/wishlist";
-  static const profile = "/profile";
+  static const account = "/account";
   static const cart = "/cart";
 }

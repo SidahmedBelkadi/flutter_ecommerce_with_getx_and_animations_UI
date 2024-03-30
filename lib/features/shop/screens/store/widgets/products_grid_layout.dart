@@ -15,25 +15,27 @@ class ProductsGridLayout extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: AnimationLimiter(
-        child: GridView.builder(
-          shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            mainAxisExtent: 260.h,
-            mainAxisSpacing: AppSizes.gridViewSpacing,
-            crossAxisSpacing: AppSizes.gridViewSpacing,
-          ),
-          itemCount: 5,
-          itemBuilder: (_, int index) => AnimationConfiguration.staggeredGrid(
-            position: index,
-            columnCount: 2,
-            duration: const Duration(milliseconds: 500),
-            child: const SlideAnimation(
-              verticalOffset: 100.0,
-              child: FadeInAnimation(
-                child: ScaleAnimation(
-                  child: ProductCard(),
+        child: RefreshIndicator(
+          onRefresh: () async {},
+          child: GridView.builder(
+            shrinkWrap: true,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              mainAxisExtent: 260.h,
+              mainAxisSpacing: AppSizes.gridViewSpacing,
+              crossAxisSpacing: AppSizes.gridViewSpacing,
+            ),
+            itemCount: 5,
+            itemBuilder: (_, int index) => AnimationConfiguration.staggeredGrid(
+              position: index,
+              columnCount: 2,
+              duration: const Duration(milliseconds: 500),
+              child: const SlideAnimation(
+                verticalOffset: 100.0,
+                child: FadeInAnimation(
+                  child: ScaleAnimation(
+                    child: ProductCard(),
+                  ),
                 ),
               ),
             ),

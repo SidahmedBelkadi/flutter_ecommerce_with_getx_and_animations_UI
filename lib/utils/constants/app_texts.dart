@@ -26,7 +26,7 @@ class AppTexts {
 
   // ============= Sign Up ================= //
   static const signUpHeader = "Let's create your account";
-  static const labelUserName = "Username";
+  static const fullName = "Full Name";
   static const labelPhoneN = "Phone Number";
   static const labelPasswordConfirmation = "Password Confirmation";
   static const iAgreeTo = "I agree to";
@@ -58,4 +58,22 @@ class AppTexts {
 
   // ============= WishList ================= //
   static const myCart = "My Cart";
+
+  // ============= Account ================= //
+  static const accountSettings = "Account Settings";
+
+  static const myAddressesTitle = "My addresses";
+  static const myAddressesSubTitle = "Set shopping delivery address";
+
+  static const myCartTitle = "My Cart";
+  static const myCartSubTitle = "Add, remove products and move to checkout";
+
+  static const myOrdersTitle = "My Orders";
+  static const myOrdersSubTitle = "In-progress and Completed Order";
+
+  static const notificationsTitle = "Notifications";
+  static const notificationsSubTitle = "Set any kind of notification message";
+
+  static const logout = "Logout";
+  static const deleteAccount = "Delete Account";
 }
