@@ -9,9 +9,13 @@ class CustomSimpleBackAppBar extends StatelessWidget implements PreferredSize {
   const CustomSimpleBackAppBar({
     super.key,
     this.title,
+    this.offRoute = false,
+    this.routeName,
   });
 
   final String? title;
+  final bool offRoute;
+  final String? routeName;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +27,7 @@ class CustomSimpleBackAppBar extends StatelessWidget implements PreferredSize {
         IconButton(
           icon: const Icon(CupertinoIcons.clear),
           color: Get.isDarkMode ? AppColors.grey : AppColors.darkerGrey,
-          onPressed: () => Get.back(),
+          onPressed: () => offRoute ? Get.offNamed(routeName!) : Get.back(),
         ),
       ],
     );

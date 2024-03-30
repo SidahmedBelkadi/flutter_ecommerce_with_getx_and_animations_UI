@@ -10,9 +10,14 @@ class AppOutlinedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 55.sp,
+      height: 65.sp,
       width: double.infinity,
-      child: OutlinedButton(onPressed: onPressed, child: Text(text)),
+      child: OutlinedButton(
+        onPressed: onPressed,
+        child: Text(
+          text,
+        ),
+      ),
     );
   }
 }

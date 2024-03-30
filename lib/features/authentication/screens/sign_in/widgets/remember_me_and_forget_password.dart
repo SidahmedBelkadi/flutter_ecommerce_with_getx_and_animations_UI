@@ -44,6 +44,7 @@ class RememberMeAndForgetPasswordRow extends GetView<SignInController> {
             style: TextStyle(
               color: AppColors.primary,
               decoration: TextDecoration.underline,
+              decorationColor: AppColors.primary,
             ),
           ),
         ),

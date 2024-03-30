@@ -1,6 +1,13 @@
 class AppTexts {
   AppTexts._();
 
+  // ===== Tes Info ===== //
+  static const myName = "Sidahmed Belkadi";
+  static const myEmail = "sidahmed.belkadi0@gmail.com";
+  static const myPhone = "+213 669 89 61 93";
+  static const dateOfBirth = "11 March, 2002";
+  static const labelDateOfBirth = "Date of birth";
+
   // ============= OnBoarding ================= //
   static const onBoardingTitleOne = "Choose Product";
   static const onBoardingBodyOne =
@@ -76,4 +83,12 @@ class AppTexts {
 
   static const logout = "Logout";
   static const deleteAccount = "Delete Account";
+
+  // ============= Profile ================= //
+  static const profile = "Profile";
+  static const changeProfilePicture = "Change Profile Picture";
+  static const profileInformation = "Profile Information's";
+  static const personalInformation = "Personal Information's";
+  static const editYourName = "Edit Your Name";
+  static const save = "Save";
 }

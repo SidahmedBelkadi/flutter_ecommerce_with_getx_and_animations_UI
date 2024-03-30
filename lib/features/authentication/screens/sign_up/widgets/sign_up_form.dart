@@ -30,7 +30,7 @@ class SignUpForm extends GetView<SignUpController> {
             validator: (value) => AppValidation.validateInput(
               value: value!,
               type: InputTypes.firstName,
-              inputName: "Username",
+              inputName: "Full Name",
               min: 6,
               max: 30,
             ),

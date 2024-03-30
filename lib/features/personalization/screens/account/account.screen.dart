@@ -1,6 +1,6 @@
 import 'package:ecommmerce/features/personalization/screens/account/widgets/account_header.dart';
 import 'package:ecommmerce/features/personalization/screens/account/widgets/account_settings_section.dart';
-import 'package:ecommmerce/features/personalization/screens/account/widgets/logout_and_delete_account.dart';
+import 'package:ecommmerce/features/personalization/screens/account/widgets/logout.dart';
 import 'package:ecommmerce/utils/constants/app_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

@@ -25,7 +25,11 @@ class StoreScreen extends StatelessWidget {
           SizedBox(height: AppSizes.spaceBtwSections.h),
           const SearchBox(),
           SizedBox(height: AppSizes.spaceBtwSections.h),
-          const Expanded(child: ProductsGridLayout())
+          const Expanded(
+            child: ProductsGridLayout(
+              withRefreshIndicator: true,
+            ),
+          )
         ],
       ),
     );

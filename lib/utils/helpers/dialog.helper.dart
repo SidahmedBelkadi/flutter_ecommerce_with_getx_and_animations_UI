@@ -69,7 +69,7 @@ class AppDialog {
       barrierDismissible: false,
       title: "Delete Account",
       content: const Text(
-          "Do you really want to delete your account? not that this operation is permament ."),
+          "Do you really want to delete your account? note that this operation is permanent ."),
       actions: [
         MaterialButton(
           onPressed: () => Get.back(),
