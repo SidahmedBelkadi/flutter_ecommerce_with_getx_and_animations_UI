@@ -26,11 +26,11 @@ class AccountUserInformation extends StatelessWidget {
         Row(
           children: [
             ClipRRect(
-              borderRadius: BorderRadius.circular(200.sp),
+              borderRadius: BorderRadius.circular(100.sp),
               child: Image(
                 image: const AssetImage(AppImages.user),
-                height: 60.h,
-                width: 50.w,
+                height: 60.sp,
+                width: 60.sp,
                 fit: BoxFit.cover,
               ),
             ),

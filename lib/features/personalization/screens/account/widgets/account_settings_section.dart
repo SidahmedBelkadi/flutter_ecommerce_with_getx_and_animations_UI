@@ -39,7 +39,7 @@ class AccountSettings extends StatelessWidget {
                   icon: Iconsax.safe_home,
                   title: AppTexts.myAddressesTitle,
                   subTitle: AppTexts.myAddressesSubTitle,
-                  onTap: () {},
+                  onTap: () => Get.toNamed(AppRoutes.addresses),
                 ),
                 AccountTileItem(
                   icon: Iconsax.shopping_cart,

@@ -19,8 +19,8 @@ class ProfilePictureSection extends StatelessWidget {
           borderRadius: BorderRadius.circular(100.sp),
           child: Image(
             image: const AssetImage(AppImages.user),
-            height: 90.h,
-            width: 90.w,
+            height: 90.sp,
+            width: 90.sp,
             fit: BoxFit.cover,
           ),
         ),

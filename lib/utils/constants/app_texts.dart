@@ -5,6 +5,8 @@ class AppTexts {
   static const myName = "Sidahmed Belkadi";
   static const myEmail = "sidahmed.belkadi0@gmail.com";
   static const myPhone = "+213 669 89 61 93";
+  static const myAddress =
+      "Evolution City, N15 Ouled Moussa, Boumerdes, Algeria";
   static const dateOfBirth = "11 March, 2002";
   static const labelDateOfBirth = "Date of birth";
 
@@ -91,4 +93,14 @@ class AppTexts {
   static const personalInformation = "Personal Information's";
   static const editYourName = "Edit Your Name";
   static const save = "Save";
+
+// ============= Addresses ================= //
+  static const addresses = "Addresses";
+  static const addAddress = "Add new Address";
+  static const name = "Name";
+  static const street = "Street";
+  static const postalCode = "Postal code";
+  static const city = "City";
+  static const state = "State";
+  static const country = "Country";
 }

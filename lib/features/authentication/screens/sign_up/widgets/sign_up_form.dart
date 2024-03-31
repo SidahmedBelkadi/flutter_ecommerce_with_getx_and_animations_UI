@@ -51,17 +51,18 @@ class SignUpForm extends GetView<SignUpController> {
           ),
           SizedBox(height: AppSizes.spaceBtwInputFields.h),
           AppTextFormField(
-              labelText: AppTexts.labelPhoneN,
-              prefixIcon: Icons.phone,
-              textInputType: TextInputType.number,
-              textEditingController: controller.phoneNumber,
-              validator: (value) => AppValidation.validateInput(
-                    value: value!,
-                    type: InputTypes.phone,
-                    inputName: "Phone Number",
-                    min: 9,
-                    max: 11,
-                  )),
+            labelText: AppTexts.labelPhoneN,
+            prefixIcon: Icons.phone,
+            textInputType: TextInputType.number,
+            textEditingController: controller.phoneNumber,
+            validator: (value) => AppValidation.validateInput(
+              value: value!,
+              type: InputTypes.phone,
+              inputName: "Phone Number",
+              min: 9,
+              max: 11,
+            ),
+          ),
           SizedBox(height: AppSizes.spaceBtwInputFields.h),
           Obx(
             () => Column(

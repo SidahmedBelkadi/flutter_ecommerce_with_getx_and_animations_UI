@@ -1,5 +1,4 @@
 import 'package:ecommmerce/common/widgets/appBars/custom_back_app_bar.dart';
-import 'package:ecommmerce/config/routing/app_routes.dart';
 import 'package:ecommmerce/features/personalization/screens/profile/widgets/delete_account.dart';
 import 'package:ecommmerce/features/personalization/screens/profile/widgets/profile_informations_section.dart';
 import 'package:ecommmerce/features/personalization/screens/profile/widgets/profile_picture_section.dart';
@@ -16,8 +15,6 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: const CustomSimpleBackAppBar(
         title: AppTexts.profile,
-        offRoute: true,
-        routeName: AppRoutes.account,
       ),
       body: SingleChildScrollView(
         child: Padding(
