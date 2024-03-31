@@ -4,6 +4,7 @@ import 'package:ecommmerce/features/personalization/screens/account/account.scre
 import 'package:ecommmerce/features/personalization/screens/addresses/adresses.screen.dart';
 import 'package:ecommmerce/features/personalization/screens/profile/profile.screen.dart';
 import 'package:ecommmerce/features/shop/screens/cart/cart.screen.dart';
+import 'package:ecommmerce/features/shop/screens/orders/orders.screen.dart';
 import 'package:ecommmerce/utils/core/middlewares/init.middleware.dart';
 import 'package:get/get.dart';
 
@@ -116,6 +117,13 @@ List<GetPage<dynamic>>? getPages = [
   GetPage(
     name: AppRoutes.addresses,
     page: () => const AddressesScreen(),
+    transition: routeTransition,
+  ),
+
+  // ---- Orders ----- //
+  GetPage(
+    name: AppRoutes.orders,
+    page: () => const OrdersScreen(),
     transition: routeTransition,
   ),
 ];

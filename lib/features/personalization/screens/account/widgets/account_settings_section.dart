@@ -51,7 +51,7 @@ class AccountSettings extends StatelessWidget {
                   icon: Iconsax.bag_tick,
                   title: AppTexts.myOrdersTitle,
                   subTitle: AppTexts.myOrdersSubTitle,
-                  onTap: () {},
+                  onTap: () => Get.toNamed(AppRoutes.orders),
                 ),
                 AccountTileItem(
                   icon: Iconsax.notification,
