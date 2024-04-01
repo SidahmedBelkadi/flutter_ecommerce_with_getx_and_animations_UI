@@ -4,9 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../constants/app_colors.dart';
 import '../../constants/app_sizes.dart';
 
-class CustomTextFormFieldTheme {
-  CustomTextFormFieldTheme._();
-
+abstract class CustomTextFormFieldTheme {
   static InputDecorationTheme lightInputDecorationTheme = InputDecorationTheme(
     errorMaxLines: 1,
     prefixIconColor: AppColors.darkGrey,

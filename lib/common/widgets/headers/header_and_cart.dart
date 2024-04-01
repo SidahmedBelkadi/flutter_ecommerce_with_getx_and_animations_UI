@@ -22,7 +22,7 @@ class HeaderAndCartIcon extends StatelessWidget {
           children: [
             Text(AppTexts.goodDayForShopping,
                 style: Theme.of(context).textTheme.bodySmall),
-            Text("Sidahmed Belkadi",
+            Text(AppTexts.myName,
                 style: Theme.of(context).textTheme.titleLarge),
           ],
         ),
@@ -41,8 +41,7 @@ class HeaderAndCartIcon extends StatelessWidget {
             curve: Curves.fastOutSlowIn,
             colorChangeAnimationCurve: Curves.easeInCubic,
           ),
-          badgeStyle: badges.BadgeStyle(
-              badgeColor: Get.isDarkMode ? AppColors.grey : AppColors.primary),
+          badgeStyle: badges.BadgeStyle(badgeColor: AppColors.primary),
           child: GestureDetector(
             onTap: () => Get.toNamed(AppRoutes.cart),
             child: const Icon(Iconsax.shopping_cart),

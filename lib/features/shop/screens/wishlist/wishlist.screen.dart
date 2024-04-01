@@ -1,5 +1,4 @@
 import 'package:ecommmerce/features/shop/screens/store/widgets/products_grid_layout.dart';
-import 'package:ecommmerce/utils/constants/app_sizes.dart';
 import 'package:ecommmerce/utils/constants/app_texts.dart';
 import 'package:flutter/material.dart';
 
@@ -10,12 +9,7 @@ class WishListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(),
-      body: const SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.all(AppSizes.defaultSpace),
-          child: ProductsGridLayout(),
-        ),
-      ),
+      body: const ProductsGridLayout(),
     );
   }
 

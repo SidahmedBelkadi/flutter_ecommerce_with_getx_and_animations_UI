@@ -1,7 +1,5 @@
-class AppTexts {
-  AppTexts._();
-
-  // ===== Tes Info ===== //
+abstract class AppTexts {
+  // ===== Test Info ===== //
   static const myName = "Sidahmed Belkadi";
   static const myEmail = "sidahmed.belkadi0@gmail.com";
   static const myPhone = "+213 669 89 61 93";
@@ -9,6 +7,8 @@ class AppTexts {
       "Evolution City, N15 Ouled Moussa, Boumerdes, Algeria";
   static const dateOfBirth = "11 March, 2002";
   static const labelDateOfBirth = "Date of birth";
+  static const loremIpsum =
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
 
   // ============= OnBoarding ================= //
   static const onBoardingTitleOne = "Choose Product";
@@ -103,4 +103,9 @@ class AppTexts {
   static const city = "City";
   static const state = "State";
   static const country = "Country";
+
+// ============= Product Detail ================= //
+  static const description = "Description";
+  static const showMore = "Show More";
+  static const showLess = "Show Less";
 }

@@ -4,9 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../constants/app_colors.dart';
 import '../../constants/app_sizes.dart';
 
-class CustomAppBarTheme {
-  CustomAppBarTheme._();
-
+abstract class CustomAppBarTheme {
   static final lightAppBarTheme = AppBarTheme(
     elevation: 0,
     centerTitle: true,

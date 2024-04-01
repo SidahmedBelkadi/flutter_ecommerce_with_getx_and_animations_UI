@@ -16,11 +16,11 @@ class CartIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 30.h,
-      width: 30.w,
+      height: 30.sp,
+      width: 30.sp,
       decoration: BoxDecoration(
         color: color,
-        borderRadius: BorderRadius.circular(100),
+        borderRadius: BorderRadius.circular(100.sp),
       ),
       child: Icon(
         icon,

@@ -2,9 +2,7 @@ import 'package:ecommmerce/utils/constants/app_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class AppSnackBar {
-  AppSnackBar._();
-
+abstract class AppSnackBar {
   static offlineSnackBar() {
     return Get.snackbar(
       "Oops!",

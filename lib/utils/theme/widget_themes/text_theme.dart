@@ -4,9 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../constants/app_colors.dart';
 
 /// Custom Class for Light & Dark Text Themes
-class CustomTextTheme {
-  CustomTextTheme._(); // To avoid creating instances
-
+abstract class CustomTextTheme {
   /// Customizable Light Text Theme
   static TextTheme lightTextTheme = TextTheme(
     headlineLarge: const TextStyle().copyWith(

@@ -9,9 +9,7 @@ enum InputTypes {
   password;
 }
 
-class AppValidation {
-  AppValidation._();
-
+abstract class AppValidation {
   static validateInput({
     required String value,
     required InputTypes type,

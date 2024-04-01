@@ -52,7 +52,7 @@ class HomeBanner extends GetView<HomeController> {
                   horizontal: AppSizes.xs.sp,
                 ),
                 decoration: BoxDecoration(
-                  color: Get.isDarkMode ? AppColors.grey : AppColors.primary,
+                  color: AppColors.primary,
                   borderRadius: BorderRadius.circular(100),
                 ),
               ),

@@ -9,9 +9,7 @@ import 'package:flutter/material.dart';
 
 import '../constants/app_colors.dart';
 
-class CustomAppTheme {
-  CustomAppTheme._();
-
+abstract class CustomAppTheme {
   static ThemeData lightTheme = ThemeData(
     useMaterial3: true,
     fontFamily: 'Poppins',

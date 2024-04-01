@@ -12,26 +12,30 @@ class StoreScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.fromLTRB(
-        AppSizes.defaultSpace.sp,
-        AppSizes.md.sp,
-        AppSizes.defaultSpace.sp,
-        AppSizes.defaultSpace.sp,
-      ),
-      child: Column(
-        children: [
-          const HeaderAndCartIcon(),
-          SizedBox(height: AppSizes.spaceBtwSections.h),
-          const SearchBox(),
-          SizedBox(height: AppSizes.spaceBtwSections.h),
-          const Expanded(
-            child: ProductsGridLayout(
-              withRefreshIndicator: true,
-            ),
-          )
-        ],
-      ),
+    return Column(
+      children: [
+        Padding(
+          padding: EdgeInsets.fromLTRB(
+            AppSizes.defaultSpace.sp,
+            AppSizes.md.sp,
+            AppSizes.defaultSpace.sp,
+            0,
+          ),
+          child: Column(
+            children: [
+              const HeaderAndCartIcon(),
+              SizedBox(height: AppSizes.spaceBtwSections.h),
+              const SearchBox(),
+              SizedBox(height: AppSizes.spaceBtwSections.h),
+            ],
+          ),
+        ),
+        const Expanded(
+          child: ProductsGridLayout(
+            withRefreshIndicator: true,
+          ),
+        )
+      ],
     );
   }
 }

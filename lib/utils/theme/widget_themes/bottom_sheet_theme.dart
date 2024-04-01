@@ -3,9 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../constants/app_colors.dart';
 
-class CustomBottomSheetTheme {
-  CustomBottomSheetTheme._();
-
+abstract class CustomBottomSheetTheme {
   static BottomSheetThemeData lightBottomSheetTheme = BottomSheetThemeData(
     showDragHandle: true,
     backgroundColor: AppColors.white,

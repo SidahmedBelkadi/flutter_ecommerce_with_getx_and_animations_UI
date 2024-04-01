@@ -1,8 +1,6 @@
 import 'package:ecommmerce/utils/core/services/init.service.dart';
 
-class AppSharedPreferences {
-  AppSharedPreferences._();
-
+abstract class AppSharedPreferences {
   static void setString(String key, String value) {
     InitialService.instance.sharedPreferences.setString(key, value);
   }

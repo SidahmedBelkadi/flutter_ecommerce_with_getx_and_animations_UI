@@ -5,9 +5,7 @@ import '../../constants/app_colors.dart';
 import '../../constants/app_sizes.dart';
 
 /// Custom Class for Light & Dark Text Themes
-class CustomCheckboxTheme {
-  CustomCheckboxTheme._(); // To avoid creating instances
-
+abstract class CustomCheckboxTheme {
   /// Customizable Light Text Theme
   static CheckboxThemeData lightCheckboxTheme = CheckboxThemeData(
     shape: RoundedRectangleBorder(

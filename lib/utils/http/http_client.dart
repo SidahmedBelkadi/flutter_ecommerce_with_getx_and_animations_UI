@@ -7,14 +7,11 @@ import 'package:http/http.dart' as http;
 
 import '../exceptions/app_exceptions.dart';
 
-/// This class provides methods for making HTTP requests with various functionalities.
+/// This abstract class provides methods for making HTTP requests with various functionalities.
 /// It includes support for GET, POST, PUT, PATCH, and DELETE methods, along with
 /// optional token handling and query parameters.
 
-class HttpClient {
-  /// Private constructor to prevent accidental instantiation
-  HttpClient._();
-
+abstract class AppHttpClient {
   /// Timeout value (in seconds) used for HTTP requests.
   static const timeoutException = 20;
 

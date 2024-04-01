@@ -2,9 +2,7 @@ import 'package:ecommmerce/utils/constants/app_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class AppBottomSheet {
-  AppBottomSheet._();
-
+abstract class AppBottomSheet {
   static customFormBottomSheet(
       {required BuildContext context, required Widget form}) {
     showModalBottomSheet(

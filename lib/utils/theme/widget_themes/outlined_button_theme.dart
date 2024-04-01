@@ -5,9 +5,7 @@ import '../../constants/app_colors.dart';
 import '../../constants/app_sizes.dart';
 
 /* -- Light & Dark Outlined Button Themes -- */
-class CustomOutlinedButtonTheme {
-  CustomOutlinedButtonTheme._(); //To avoid creating instances
-
+abstract class CustomOutlinedButtonTheme {
   /* -- Light Theme -- */
   static final lightOutlinedButtonTheme = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(

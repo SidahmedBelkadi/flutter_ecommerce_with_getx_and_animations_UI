@@ -1,4 +1,4 @@
-import 'package:ecommmerce/utils/helpers/snackbar.herlper.dart';
+import 'package:ecommmerce/utils/helpers/snackbar.helper.dart';
 
 import '../exceptions/app_exceptions.dart';
 

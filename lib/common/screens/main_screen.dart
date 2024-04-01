@@ -1,3 +1,4 @@
+import 'package:ecommmerce/utils/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -27,9 +28,7 @@ class MainScreen extends StatelessWidget {
           onDestinationSelected: (value) =>
               controller.onDestinationSelected(value),
           backgroundColor: darkMode ? Colors.black : Colors.white,
-          indicatorColor: darkMode
-              ? Colors.white.withOpacity(0.1)
-              : Colors.black.withOpacity(0.1),
+          indicatorColor: Colors.transparent,
           indicatorShape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
           destinations: [
@@ -38,19 +37,26 @@ class MainScreen extends StatelessWidget {
               selectedIndex: controller.selectedIndex.value,
               itemIndex: 0,
               child: NavigationDestination(
-                  icon: Icon(controller.selectedIndex.value == 0
+                icon: Icon(
+                  controller.selectedIndex.value == 0
                       ? Iconsax.home5
-                      : Iconsax.home),
-                  label: 'Home'),
+                      : Iconsax.home,
+                  color: AppColors.primary,
+                ),
+                label: 'Home',
+              ),
             ),
             BottomNavigationItemWrapper(
               darkMode: darkMode,
               selectedIndex: controller.selectedIndex.value,
               itemIndex: 1,
               child: NavigationDestination(
-                  icon: Icon(controller.selectedIndex.value == 1
-                      ? Iconsax.shop5
-                      : Iconsax.shop),
+                  icon: Icon(
+                    controller.selectedIndex.value == 1
+                        ? Iconsax.shop5
+                        : Iconsax.shop,
+                    color: AppColors.primary,
+                  ),
                   label: 'Store'),
             ),
             BottomNavigationItemWrapper(
@@ -58,9 +64,12 @@ class MainScreen extends StatelessWidget {
               selectedIndex: controller.selectedIndex.value,
               itemIndex: 2,
               child: NavigationDestination(
-                  icon: Icon(controller.selectedIndex.value == 2
-                      ? Iconsax.heart5
-                      : Iconsax.heart),
+                  icon: Icon(
+                    controller.selectedIndex.value == 2
+                        ? Iconsax.heart5
+                        : Iconsax.heart,
+                    color: AppColors.primary,
+                  ),
                   label: 'Wishlist'),
             ),
             BottomNavigationItemWrapper(
@@ -68,9 +77,12 @@ class MainScreen extends StatelessWidget {
               selectedIndex: controller.selectedIndex.value,
               itemIndex: 3,
               child: NavigationDestination(
-                  icon: Icon(controller.selectedIndex.value == 3
-                      ? Icons.person_2
-                      : Iconsax.user),
+                  icon: Icon(
+                    controller.selectedIndex.value == 3
+                        ? Icons.person_2
+                        : Iconsax.user,
+                    color: AppColors.primary,
+                  ),
                   label: 'Account'),
             ),
           ],
@@ -107,9 +119,9 @@ class BottomNavigationItemWrapper extends StatelessWidget {
               decoration: BoxDecoration(
                 border: Border(
                   top: isSelected
-                      ? BorderSide(
+                      ? const BorderSide(
                           width: 3,
-                          color: darkMode ? Colors.white : Colors.black,
+                          color: AppColors.primary,
                         )
                       : BorderSide.none,
                 ),
@@ -120,9 +132,9 @@ class BottomNavigationItemWrapper extends StatelessWidget {
               decoration: BoxDecoration(
                 border: Border(
                   top: isSelected
-                      ? BorderSide(
+                      ? const BorderSide(
                           width: 3,
-                          color: darkMode ? Colors.white : Colors.black,
+                          color: AppColors.primary,
                         )
                       : BorderSide.none,
                 ),

@@ -38,6 +38,7 @@ class CustomGridView extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
       shrinkWrap: true,
+      padding: EdgeInsets.all(AppSizes.defaultSpace.sp),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         mainAxisExtent: 260.h,

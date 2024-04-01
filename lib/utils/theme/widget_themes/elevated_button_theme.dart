@@ -5,9 +5,7 @@ import '../../constants/app_colors.dart';
 import '../../constants/app_sizes.dart';
 
 /* -- Light & Dark Elevated Button Themes -- */
-class CustomElevatedButtonTheme {
-  CustomElevatedButtonTheme._(); //To avoid creating instances
-
+abstract class CustomElevatedButtonTheme {
   /* -- Light Theme -- */
   static final lightElevatedButtonTheme = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
