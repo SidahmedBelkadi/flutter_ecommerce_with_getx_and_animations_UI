@@ -4,7 +4,6 @@ import 'package:ecommmerce/features/personalization/screens/account/widgets/logo
 import 'package:ecommmerce/utils/constants/app_sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 
 class AccountScreen extends StatelessWidget {
   const AccountScreen({super.key});
@@ -14,7 +13,6 @@ class AccountScreen extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: SizedBox(
-          height: Get.height,
           width: double.infinity,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

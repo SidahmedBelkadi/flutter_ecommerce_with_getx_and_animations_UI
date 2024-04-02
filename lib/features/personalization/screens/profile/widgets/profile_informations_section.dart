@@ -1,3 +1,4 @@
+import 'package:ecommmerce/features/personalization/controllers/profile/profile.controller.dart';
 import 'package:ecommmerce/features/personalization/screens/profile/widgets/profile_menu_item.dart';
 import 'package:ecommmerce/features/personalization/screens/profile/widgets/section_title.dart';
 import 'package:ecommmerce/features/personalization/screens/profile/widgets/update_name_form.dart';
@@ -5,11 +6,12 @@ import 'package:ecommmerce/utils/helpers/bottom_sheet.helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+import 'package:get/get.dart';
 
 import '../../../../../utils/constants/app_sizes.dart';
 import '../../../../../utils/constants/app_texts.dart';
 
-class ProfileInformationsSection extends StatelessWidget {
+class ProfileInformationsSection extends GetView<ProfileController> {
   const ProfileInformationsSection({
     super.key,
   });

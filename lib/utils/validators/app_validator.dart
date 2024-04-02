@@ -3,8 +3,15 @@ import 'package:get/get.dart';
 enum InputTypes {
   firstName,
   lastName,
+  fullName,
   username,
+  name,
   email,
+  country,
+  state,
+  city,
+  street,
+  postalCode,
   phone,
   password;
 }
@@ -41,6 +48,12 @@ abstract class AppValidation {
       }
     }
 
+    if (type == InputTypes.postalCode) {
+      if (!GetUtils.isNumericOnly(value)) {
+        return "Please enter valid postal code.";
+      }
+    }
+
     if (type == InputTypes.phone) {
       final regExp = RegExp(r"^(05|06|07)\d{8}$");
       if (!regExp.hasMatch(value)) {
@@ -49,8 +62,7 @@ abstract class AppValidation {
     }
   }
 
-  static validatePassword(
-      {required String value, required int max, required int min}) {
+  static validatePassword({required String value, required int max, required int min}) {
     if (value.isEmpty) {
       return "The password is required.";
     }

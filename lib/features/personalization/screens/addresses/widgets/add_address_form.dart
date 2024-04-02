@@ -1,5 +1,7 @@
+import 'package:ecommmerce/features/personalization/controllers/adresses/adresses.controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../../common/widgets/auth/app_text_field.dart';
@@ -8,12 +10,10 @@ import '../../../../../utils/constants/app_sizes.dart';
 import '../../../../../utils/constants/app_texts.dart';
 import '../../../../../utils/validators/app_validator.dart';
 
-class AddAddressForm extends StatelessWidget {
+class AddAddressForm extends GetView<AddressesController> {
   const AddAddressForm({
     super.key,
   });
-
-  // Todo : Do Not Forget To Handle Validation New Types of the new form
 
   @override
   Widget build(BuildContext context) {
@@ -27,15 +27,14 @@ class AddAddressForm extends StatelessWidget {
         SizedBox(height: AppSizes.spaceBtwSections.h),
         AppTextFormField(
           labelText: AppTexts.name,
-          prefixIcon: Icons.person,
-          // Todo : create TextEditingController
-          textEditingController: TextEditingController(),
+          prefixIcon: Iconsax.personalcard,
+          textEditingController: controller.name,
           validator: (value) => AppValidation.validateInput(
             value: value!,
-            type: InputTypes.firstName,
+            type: InputTypes.name,
             inputName: AppTexts.name,
             min: 6,
-            max: 30,
+            max: 60,
           ),
         ),
         SizedBox(height: AppSizes.spaceBtwInputFields.h),
@@ -43,8 +42,7 @@ class AddAddressForm extends StatelessWidget {
           labelText: AppTexts.labelPhoneN,
           prefixIcon: Icons.phone,
           textInputType: TextInputType.number,
-          // Todo :
-          textEditingController: TextEditingController(),
+          textEditingController: controller.phoneNumber,
           validator: (value) => AppValidation.validateInput(
             value: value!,
             type: InputTypes.phone,
@@ -54,89 +52,68 @@ class AddAddressForm extends StatelessWidget {
           ),
         ),
         SizedBox(height: AppSizes.spaceBtwInputFields.h),
-        Row(
-          children: [
-            Expanded(
-              child: AppTextFormField(
-                labelText: AppTexts.country,
-                prefixIcon: Iconsax.global,
-                // todo:
-                textEditingController: TextEditingController(),
-                validator: (value) => AppValidation.validateInput(
-                  value: value!,
-                  type: InputTypes.firstName,
-                  inputName: AppTexts.country,
-                  min: 6,
-                  max: 30,
-                ),
-              ),
-            ),
-            SizedBox(width: AppSizes.md.w),
-            Expanded(
-              child: AppTextFormField(
-                labelText: AppTexts.state,
-                prefixIcon: Iconsax.activity,
-                // todo:
-                textEditingController: TextEditingController(),
-                validator: (value) => AppValidation.validateInput(
-                  value: value!,
-                  type: InputTypes.firstName,
-                  inputName: AppTexts.state,
-                  min: 6,
-                  max: 30,
-                ),
-              ),
-            ),
-          ],
+        AppTextFormField(
+          labelText: AppTexts.country,
+          prefixIcon: Iconsax.global,
+          textEditingController: controller.country,
+          validator: (value) => AppValidation.validateInput(
+            value: value!,
+            type: InputTypes.country,
+            inputName: AppTexts.country,
+            min: 3,
+            max: 50,
+          ),
         ),
         SizedBox(height: AppSizes.spaceBtwInputFields.h),
-        Row(
-          children: [
-            Expanded(
-              child: AppTextFormField(
-                labelText: AppTexts.city,
-                prefixIcon: Iconsax.building,
-                // todo:
-                textEditingController: TextEditingController(),
-                validator: (value) => AppValidation.validateInput(
-                  value: value!,
-                  type: InputTypes.firstName,
-                  inputName: AppTexts.city,
-                  min: 6,
-                  max: 30,
-                ),
-              ),
-            ),
-            SizedBox(width: AppSizes.md.w),
-            Expanded(
-              child: AppTextFormField(
-                labelText: AppTexts.street,
-                prefixIcon: Iconsax.building_31,
-                // todo:
-                textEditingController: TextEditingController(),
-                validator: (value) => AppValidation.validateInput(
-                  value: value!,
-                  type: InputTypes.firstName,
-                  inputName: AppTexts.street,
-                  min: 6,
-                  max: 30,
-                ),
-              ),
-            ),
-          ],
+        AppTextFormField(
+          labelText: AppTexts.state,
+          prefixIcon: Iconsax.activity,
+          textEditingController: controller.state,
+          validator: (value) => AppValidation.validateInput(
+            value: value!,
+            type: InputTypes.state,
+            inputName: AppTexts.state,
+            min: 4,
+            max: 50,
+          ),
+        ),
+        SizedBox(height: AppSizes.spaceBtwInputFields.h),
+        AppTextFormField(
+          labelText: AppTexts.city,
+          prefixIcon: Iconsax.building,
+          textEditingController: controller.city,
+          validator: (value) => AppValidation.validateInput(
+            value: value!,
+            type: InputTypes.city,
+            inputName: AppTexts.city,
+            min: 4,
+            max: 50,
+          ),
+        ),
+        SizedBox(height: AppSizes.spaceBtwInputFields.h),
+        AppTextFormField(
+          labelText: AppTexts.street,
+          prefixIcon: Iconsax.building_31,
+          textEditingController: controller.street,
+          validator: (value) => AppValidation.validateInput(
+            value: value!,
+            type: InputTypes.street,
+            inputName: AppTexts.street,
+            min: 5,
+            max: 150,
+          ),
         ),
         SizedBox(height: AppSizes.spaceBtwInputFields.h),
         AppTextFormField(
           labelText: AppTexts.postalCode,
           prefixIcon: Iconsax.mobile,
-          // Todo : create TextEditingController
-          textEditingController: TextEditingController(),
+          textEditingController: controller.postalCode,
           validator: (value) => AppValidation.validateInput(
             value: value!,
-            type: InputTypes.firstName,
+            type: InputTypes.postalCode,
             inputName: AppTexts.postalCode,
-            min: 6,
-            max: 30,
+            min: 3,
+            max: 20,
           ),
         ),
         SizedBox(height: AppSizes.spaceBtwSections.h),

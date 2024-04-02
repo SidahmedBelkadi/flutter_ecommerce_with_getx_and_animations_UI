@@ -1,3 +1,4 @@
+import 'package:ecommmerce/utils/constants/app_texts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -33,8 +34,8 @@ class AccountHeader extends StatelessWidget {
           const AccountAppBar(),
           SizedBox(height: AppSizes.spaceBtwItems.h),
           const AccountUserInformation(
-            name: "Sidahmed Belkadi",
-            email: "sidahmed.belkadi0@gmail.com",
+            name: AppTexts.myName,
+            email: AppTexts.myEmail,
           ),
         ],
       ),

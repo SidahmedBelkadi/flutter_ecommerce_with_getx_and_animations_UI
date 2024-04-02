@@ -29,7 +29,7 @@ class SignUpForm extends GetView<SignUpController> {
             textEditingController: controller.fullName,
             validator: (value) => AppValidation.validateInput(
               value: value!,
-              type: InputTypes.firstName,
+              type: InputTypes.fullName,
               inputName: "Full Name",
               min: 6,
               max: 30,
@@ -70,15 +70,13 @@ class SignUpForm extends GetView<SignUpController> {
                 AppTextFormField(
                   labelText: AppTexts.labelPassword,
                   prefixIcon: Icons.key,
-                  suffixIcon: controller.passwordInvisible.value
-                      ? Icons.visibility
-                      : Icons.visibility_off,
+                  suffixIcon:
+                      controller.passwordInvisible.value ? Icons.visibility : Icons.visibility_off,
                   onIconTap: () => controller.togglePassword(),
                   textInputType: TextInputType.text,
                   obscureText: controller.passwordInvisible.value,
                   textEditingController: controller.password,
-                  validator: (value) =>
-                      AppValidation.validatePasswordAndConfirmation(
+                  validator: (value) => AppValidation.validatePasswordAndConfirmation(
                     password: controller.password.text,
                     confirmation: controller.passwordConfirmation.text,
                     inputName: "Password",
@@ -97,8 +95,7 @@ class SignUpForm extends GetView<SignUpController> {
                   textInputType: TextInputType.text,
                   obscureText: controller.passwordConfirmationInvisible.value,
                   textEditingController: controller.passwordConfirmation,
-                  validator: (value) =>
-                      AppValidation.validatePasswordAndConfirmation(
+                  validator: (value) => AppValidation.validatePasswordAndConfirmation(
                     password: controller.password.text,
                     confirmation: controller.passwordConfirmation.text,
                     inputName: "Confirmation",

@@ -20,6 +20,7 @@ class ProductCartItem extends StatelessWidget {
     return Container(
       height: 120.h,
       padding: const EdgeInsets.all(AppSizes.sm),
+      margin: EdgeInsets.symmetric(vertical: AppSizes.spaceBtwItems.sp / 2),
       decoration: BoxDecoration(
         boxShadow: [
           buildBoxShadow(),

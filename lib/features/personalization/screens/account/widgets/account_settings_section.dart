@@ -36,6 +36,12 @@ class AccountSettings extends StatelessWidget {
                 ),
                 SizedBox(height: AppSizes.spaceBtwItems.h),
                 AccountTileItem(
+                  icon: Iconsax.activity,
+                  title: AppTexts.administrationTitle,
+                  subTitle: AppTexts.administrationSubTitle,
+                  onTap: () {},
+                ),
+                AccountTileItem(
                   icon: Iconsax.safe_home,
                   title: AppTexts.myAddressesTitle,
                   subTitle: AppTexts.myAddressesSubTitle,
@@ -55,8 +61,8 @@ class AccountSettings extends StatelessWidget {
                 ),
                 AccountTileItem(
                   icon: Iconsax.notification,
-                  title: "Notifications",
-                  subTitle: "Set any kind of notification message",
+                  title: AppTexts.notificationsTitle,
+                  subTitle: AppTexts.notificationsSubTitle,
                   onTap: () {},
                 ),
               ]),

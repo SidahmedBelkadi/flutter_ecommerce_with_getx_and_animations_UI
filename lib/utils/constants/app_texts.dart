@@ -3,8 +3,7 @@ abstract class AppTexts {
   static const myName = "Sidahmed Belkadi";
   static const myEmail = "sidahmed.belkadi0@gmail.com";
   static const myPhone = "+213 669 89 61 93";
-  static const myAddress =
-      "Evolution City, N15 Ouled Moussa, Boumerdes, Algeria";
+  static const myAddress = "Evolution City, N15 Ouled Moussa, Boumerdes, Algeria";
   static const dateOfBirth = "11 March, 2002";
   static const labelDateOfBirth = "Date of birth";
   static const loremIpsum =
@@ -24,8 +23,7 @@ abstract class AppTexts {
 
   // ============= Sign in ================= //
   static const welcomeBack = "Welcome back,";
-  static const signInHeader =
-      "Discover Limitless Choices And Unmatched Convenience";
+  static const signInHeader = "Discover Limitless Choices And Unmatched Convenience";
   static const labelEmail = "Email";
   static const labelPassword = "Password";
   static const rememberMe = "Remember Me";
@@ -52,8 +50,7 @@ abstract class AppTexts {
   static const forgotPasswordOtpHeader = "Please enter the code sent to";
 
   // ============= Success ================= //
-  static const successHeader =
-      "Congrats!, You have successfully reset your password.";
+  static const successHeader = "Congrats!, You have successfully reset your password.";
   static const successOfSignUpHeader =
       "Congrats!, You have successfully created and confirmed your account, Enjoy !";
 
@@ -82,6 +79,9 @@ abstract class AppTexts {
 
   static const notificationsTitle = "Notifications";
   static const notificationsSubTitle = "Set any kind of notification message";
+
+  static const administrationTitle = "Administration";
+  static const administrationSubTitle = "Handle All Adimistration and security.";
 
   static const logout = "Logout";
   static const deleteAccount = "Delete Account";

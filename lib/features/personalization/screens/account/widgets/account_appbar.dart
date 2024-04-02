@@ -9,23 +9,11 @@ class AccountAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          "Account",
-          style: Theme.of(context).textTheme.headlineMedium!.apply(
-                color: AppColors.white,
-              ),
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(
-            Icons.settings,
+    return Text(
+      "Account",
+      style: Theme.of(context).textTheme.headlineMedium!.apply(
             color: AppColors.white,
           ),
-        )
-      ],
     );
   }
 }

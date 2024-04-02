@@ -17,24 +17,26 @@ class CartScreen extends StatelessWidget {
       appBar: const CustomSimpleBackAppBar(title: AppTexts.myCart),
       bottomNavigationBar: Padding(
         padding: EdgeInsets.all(AppSizes.md.sp),
-        child: AppElevatedButton(text: "Checkout : 500 \$", onPressed: () {}),
+        child: AppElevatedButton(
+          text: "Checkout : 500 \$",
+          onPressed: () {},
+        ),
       ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(
             AppSizes.md,
-            AppSizes.md,
+            AppSizes.xs,
             AppSizes.md,
             AppSizes.defaultSpace,
           ),
           child: Column(
             children: [
               AnimationLimiter(
-                child: ListView.separated(
+                child: ListView.builder(
                   physics: const NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
-                  itemBuilder: (_, index) =>
-                      AnimationConfiguration.staggeredList(
+                  itemBuilder: (_, index) => AnimationConfiguration.staggeredList(
                     position: index,
                     duration: const Duration(milliseconds: 500),
                     child: SlideAnimation(
@@ -44,8 +46,7 @@ class CartScreen extends StatelessWidget {
                             background: Container(
                               color: Colors.red,
                               alignment: Alignment.centerRight,
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: AppSizes.defaultSpace.sp),
+                              padding: EdgeInsets.symmetric(horizontal: AppSizes.defaultSpace.sp),
                               child: const Icon(
                                 CupertinoIcons.delete,
                                 color: Colors.white,
@@ -59,8 +60,6 @@ class CartScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  separatorBuilder: (__, _) =>
-                      SizedBox(height: AppSizes.spaceBtwItems.h),
                   itemCount: 8,
                 ),
               ),
