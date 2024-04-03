@@ -41,11 +41,13 @@ class ProductCartItem extends StatelessWidget {
               const CartIcon(
                 color: AppColors.primary,
                 icon: Icons.add,
+                iconColor: Colors.white,
               ),
               const Text("5"),
               CartIcon(
                 color: Get.isDarkMode ? AppColors.darkGrey : AppColors.grey,
                 icon: Icons.remove,
+                iconColor: Get.isDarkMode ? Colors.white : Colors.black,
               ),
             ],
           )

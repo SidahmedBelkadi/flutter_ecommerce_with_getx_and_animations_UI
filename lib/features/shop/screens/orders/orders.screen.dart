@@ -11,24 +11,16 @@ class OrdersScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomSimpleBackAppBar(title: "My Orders"),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.all(AppSizes.defaultSpace.sp),
-          child: const Column(
-            children: [
-              OrderItem(
-                title: "Apple Macbook Air M2 2023",
-                status: 'Pending',
-                orderDate: "14, Avril 2023",
-                shippingDate: "14, Avril 2023",
-              ),
-              OrderItem(
-                title: "Apple Macbook Air M2 2023",
-                status: 'Pending',
-                orderDate: "14, Avril 2023",
-                shippingDate: "14, Avril 2023",
-              )
-            ],
+      body: Padding(
+        padding: EdgeInsets.all(AppSizes.defaultSpace.sp),
+        child: ListView.builder(
+          shrinkWrap: true,
+          itemCount: 10,
+          itemBuilder: (_, index) => const OrderItem(
+            title: "Apple Macbook Air M2 2023",
+            status: 'Pending',
+            orderDate: "14, Avril 2023",
+            shippingDate: "14, Avril 2023",
           ),
         ),
       ),

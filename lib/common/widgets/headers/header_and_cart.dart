@@ -20,18 +20,14 @@ class HeaderAndCartIcon extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(AppTexts.goodDayForShopping,
-                style: Theme.of(context).textTheme.bodySmall),
-            Text(AppTexts.myName,
-                style: Theme.of(context).textTheme.titleLarge),
+            Text(AppTexts.goodDayForShopping, style: Theme.of(context).textTheme.bodySmall),
+            Text(AppTexts.myName, style: Theme.of(context).textTheme.titleLarge),
           ],
         ),
         badges.Badge(
           badgeContent: Text(
             '3',
-            style: Theme.of(context).textTheme.labelSmall!.apply(
-                  color: Get.isDarkMode ? Colors.black : Colors.white,
-                ),
+            style: Theme.of(context).textTheme.labelSmall!.apply(color: Colors.white),
           ),
           position: badges.BadgePosition.topEnd(top: -10, end: -12),
           badgeAnimation: const badges.BadgeAnimation.rotation(
@@ -41,7 +37,7 @@ class HeaderAndCartIcon extends StatelessWidget {
             curve: Curves.fastOutSlowIn,
             colorChangeAnimationCurve: Curves.easeInCubic,
           ),
-          badgeStyle: badges.BadgeStyle(badgeColor: AppColors.primary),
+          badgeStyle: const badges.BadgeStyle(badgeColor: AppColors.primary),
           child: GestureDetector(
             onTap: () => Get.toNamed(AppRoutes.cart),
             child: const Icon(Iconsax.shopping_cart),

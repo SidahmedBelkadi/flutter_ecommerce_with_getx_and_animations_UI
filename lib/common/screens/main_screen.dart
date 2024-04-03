@@ -10,6 +10,7 @@ import '../../features/shop/screens/home/home.screen.dart';
 import '../../features/shop/screens/store/store.screen.dart';
 import '../../features/shop/screens/wishlist/wishlist.screen.dart';
 import '../../utils/constants/app_sizes.dart';
+import '../../utils/constants/app_texts.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
@@ -25,12 +26,10 @@ class MainScreen extends StatelessWidget {
           height: 70,
           elevation: 0,
           selectedIndex: controller.selectedIndex.value,
-          onDestinationSelected: (value) =>
-              controller.onDestinationSelected(value),
+          onDestinationSelected: (value) => controller.onDestinationSelected(value),
           backgroundColor: darkMode ? Colors.black : Colors.white,
           indicatorColor: Colors.transparent,
-          indicatorShape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+          indicatorShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
           destinations: [
             BottomNavigationItemWrapper(
               darkMode: darkMode,
@@ -38,12 +37,10 @@ class MainScreen extends StatelessWidget {
               itemIndex: 0,
               child: NavigationDestination(
                 icon: Icon(
-                  controller.selectedIndex.value == 0
-                      ? Iconsax.home5
-                      : Iconsax.home,
+                  controller.selectedIndex.value == 0 ? Iconsax.home5 : Iconsax.home,
                   color: AppColors.primary,
                 ),
-                label: 'Home',
+                label: AppTexts.home,
               ),
             ),
             BottomNavigationItemWrapper(
@@ -52,12 +49,10 @@ class MainScreen extends StatelessWidget {
               itemIndex: 1,
               child: NavigationDestination(
                   icon: Icon(
-                    controller.selectedIndex.value == 1
-                        ? Iconsax.shop5
-                        : Iconsax.shop,
+                    controller.selectedIndex.value == 1 ? Iconsax.shop5 : Iconsax.shop,
                     color: AppColors.primary,
                   ),
-                  label: 'Store'),
+                  label: AppTexts.store),
             ),
             BottomNavigationItemWrapper(
               darkMode: darkMode,
@@ -65,12 +60,10 @@ class MainScreen extends StatelessWidget {
               itemIndex: 2,
               child: NavigationDestination(
                   icon: Icon(
-                    controller.selectedIndex.value == 2
-                        ? Iconsax.heart5
-                        : Iconsax.heart,
+                    controller.selectedIndex.value == 2 ? Iconsax.heart5 : Iconsax.heart,
                     color: AppColors.primary,
                   ),
-                  label: 'Wishlist'),
+                  label: AppTexts.wishList),
             ),
             BottomNavigationItemWrapper(
               darkMode: darkMode,
@@ -78,12 +71,10 @@ class MainScreen extends StatelessWidget {
               itemIndex: 3,
               child: NavigationDestination(
                   icon: Icon(
-                    controller.selectedIndex.value == 3
-                        ? Icons.person_2
-                        : Iconsax.user,
+                    controller.selectedIndex.value == 3 ? Icons.person_2 : Iconsax.user,
                     color: AppColors.primary,
                   ),
-                  label: 'Account'),
+                  label: AppTexts.account),
             ),
           ],
         ),

@@ -11,16 +11,18 @@ class AccountScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: SizedBox(
-          width: double.infinity,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const AccountHeader(),
-              SizedBox(height: AppSizes.spaceBtwItems.h),
-              const AccountSettings()
-            ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: SizedBox(
+            width: double.infinity,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const AccountHeader(),
+                SizedBox(height: AppSizes.spaceBtwItems.h),
+                const AccountSettings()
+              ],
+            ),
           ),
         ),
       ),

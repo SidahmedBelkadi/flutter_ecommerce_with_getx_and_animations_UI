@@ -8,9 +8,11 @@ class CartIcon extends StatelessWidget {
     super.key,
     required this.color,
     required this.icon,
+    this.iconColor = Colors.black,
   });
 
   final Color color;
+  final Color iconColor;
   final IconData icon;
 
   @override
@@ -25,6 +27,7 @@ class CartIcon extends StatelessWidget {
       child: Icon(
         icon,
         size: AppSizes.iconMd,
+        color: iconColor,
       ),
     );
   }

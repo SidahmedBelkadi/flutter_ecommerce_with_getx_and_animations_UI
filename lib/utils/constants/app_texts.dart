@@ -59,10 +59,15 @@ abstract class AppTexts {
   static const categories = "Categories";
   static const recentProducts = "Recent Products";
 
-  // ============= WishList ================= //
+  // ===== Navigation Menu ==== //
   static const wishList = "Wishlist";
+  static const store = "Store";
+  static const home = "Home";
+  static const account = "Account";
+  static const products = "Products";
+  static const users = "Users";
+  static const orders = "Orders";
 
-  // ============= WishList ================= //
   static const myCart = "My Cart";
 
   // ============= Account ================= //
@@ -108,4 +113,18 @@ abstract class AppTexts {
   static const description = "Description";
   static const showMore = "Show More";
   static const showLess = "Show Less";
+
+  //   ======= Administration Home ======== //
+  static const administration = "Administration";
+  static const ecommerce = "E- C O M M E R C E";
+
+  //   ======= Administration Categories ======== //
+  static const categoryName = "Category Name";
+  static const deleteCategoryTitle = "Delete category?";
+  static const deleteCategoryContent = "Do you really want to delete this category ? ";
+
+//   ======= Administration order ===== //
+  static const orderStatus = "Order Status";
+  static const deleteOrderTitle = "Delete Order?";
+  static const deleteOrderContent = "Do you really want to delete this order ? ";
 }

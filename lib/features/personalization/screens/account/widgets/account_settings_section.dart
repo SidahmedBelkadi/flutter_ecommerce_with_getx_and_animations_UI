@@ -35,12 +35,14 @@ class AccountSettings extends StatelessWidget {
                   style: Theme.of(context).textTheme.headlineSmall,
                 ),
                 SizedBox(height: AppSizes.spaceBtwItems.h),
-                AccountTileItem(
-                  icon: Iconsax.activity,
-                  title: AppTexts.administrationTitle,
-                  subTitle: AppTexts.administrationSubTitle,
-                  onTap: () {},
-                ),
+                // Todo : show This tile only for admins
+                if (1 == 1)
+                  AccountTileItem(
+                    icon: Iconsax.activity,
+                    title: AppTexts.administrationTitle,
+                    subTitle: AppTexts.administrationSubTitle,
+                    onTap: () => Get.toNamed(AppRoutes.adminHome),
+                  ),
                 AccountTileItem(
                   icon: Iconsax.safe_home,
                   title: AppTexts.myAddressesTitle,

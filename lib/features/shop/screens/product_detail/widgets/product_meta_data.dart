@@ -43,19 +43,19 @@ class ProductMetaData extends StatelessWidget {
                 ),
           ),
           SizedBox(height: AppSizes.spaceBtwItems.h),
-          const ReadMoreText(
+          ReadMoreText(
             AppTexts.loremIpsum,
             trimLines: 2,
             trimMode: TrimMode.Line,
             trimCollapsedText: AppTexts.showMore,
             trimExpandedText: AppTexts.showLess,
             moreStyle: TextStyle(
-              fontSize: 14,
+              fontSize: 14.sp,
               fontWeight: FontWeight.w800,
               color: AppColors.primary,
             ),
             lessStyle: TextStyle(
-              fontSize: 14,
+              fontSize: 14.sp,
               fontWeight: FontWeight.w800,
               color: AppColors.primary,
             ),

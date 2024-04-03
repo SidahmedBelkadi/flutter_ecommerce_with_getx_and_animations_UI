@@ -1,6 +1,4 @@
-class AppRoutes {
-  AppRoutes._();
-
+abstract class AppRoutes {
   static const onBoarding = "/";
   static const signIn = "/sign_in";
   static const signUp = "/sign_up";
@@ -17,4 +15,10 @@ class AppRoutes {
   static const addresses = "/addresses";
   static const orders = "/orders";
   static const productDetail = "/product_detail";
+
+  //   =============== Administration ================= //
+  static const admin = "/admin";
+  static const adminHome = "$admin/home";
+  static const adminCategories = "$admin/categories";
+  static const adminOrders = "$admin/orders";
 }

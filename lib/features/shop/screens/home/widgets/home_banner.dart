@@ -47,7 +47,7 @@ class HomeBanner extends GetView<HomeController> {
               (index) => AnimatedContainer(
                 duration: const Duration(seconds: 1),
                 height: 6,
-                width: controller.bannersIndex == index ? 20 : 6,
+                width: controller.bannersIndex.value == index ? 20 : 6,
                 margin: EdgeInsets.symmetric(
                   horizontal: AppSizes.xs.sp,
                 ),

@@ -22,9 +22,10 @@ class AddToCart extends StatelessWidget {
           Row(
             children: [
               CartIcon(
-                  color:
-                      Get.isDarkMode ? AppColors.darkContainer : AppColors.grey,
-                  icon: Icons.remove),
+                color: Get.isDarkMode ? AppColors.darkContainer : AppColors.grey,
+                icon: Icons.remove,
+                iconColor: Get.isDarkMode ? Colors.white : Colors.black,
+              ),
               Container(
                 margin: EdgeInsets.symmetric(horizontal: AppSizes.sm.sp),
                 child: Text(
@@ -32,7 +33,11 @@ class AddToCart extends StatelessWidget {
                   style: Theme.of(context).textTheme.bodyLarge,
                 ),
               ),
-              const CartIcon(color: AppColors.primary, icon: Icons.add),
+              const CartIcon(
+                color: AppColors.primary,
+                icon: Icons.add,
+                iconColor: Colors.white,
+              ),
             ],
           ),
           ElevatedButton(

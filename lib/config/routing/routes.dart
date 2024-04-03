@@ -1,5 +1,8 @@
 import 'package:ecommmerce/common/screens/main_screen.dart';
 import 'package:ecommmerce/config/routing/app_routes.dart';
+import 'package:ecommmerce/features/administration/screens/categories/categories.admin.screen.dart';
+import 'package:ecommmerce/features/administration/screens/home/home.admin.screen.dart';
+import 'package:ecommmerce/features/administration/screens/orders/orders.admin.screen.dart';
 import 'package:ecommmerce/features/personalization/screens/account/account.screen.dart';
 import 'package:ecommmerce/features/personalization/screens/addresses/adresses.screen.dart';
 import 'package:ecommmerce/features/personalization/screens/profile/profile.screen.dart';
@@ -132,6 +135,28 @@ List<GetPage<dynamic>>? getPages = [
   GetPage(
     name: AppRoutes.productDetail,
     page: () => const ProductDetailScreen(),
+    transition: routeTransition,
+  ),
+
+  //   ======= Administration ========== //
+  /// Home
+  GetPage(
+    name: AppRoutes.adminHome,
+    page: () => const AdminHomeScreen(),
+    transition: routeTransition,
+  ),
+
+  /// Categories
+  GetPage(
+    name: AppRoutes.adminCategories,
+    page: () => const AdminCategoriesScreen(),
+    transition: routeTransition,
+  ),
+
+  /// Orders
+  GetPage(
+    name: AppRoutes.adminOrders,
+    page: () => const AdminOrdersScreen(),
     transition: routeTransition,
   ),
 ];

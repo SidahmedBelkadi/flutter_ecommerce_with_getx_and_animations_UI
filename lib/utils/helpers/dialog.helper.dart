@@ -34,8 +34,7 @@ abstract class AppDialog {
       actions: [
         MaterialButton(
           onPressed: () => Get.back(),
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
           color: AppColors.grey,
           child: const Text(
             "Cancel",
@@ -47,8 +46,7 @@ abstract class AppDialog {
         ),
         MaterialButton(
           onPressed: onConfirm,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
           color: AppColors.primary,
           child: const Text(
             "Confirm",
@@ -71,8 +69,7 @@ abstract class AppDialog {
       actions: [
         MaterialButton(
           onPressed: () => Get.back(),
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
           color: AppColors.grey,
           child: const Text(
             "Cancel",
@@ -84,8 +81,76 @@ abstract class AppDialog {
         ),
         MaterialButton(
           onPressed: onConfirm,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          color: Colors.red,
+          child: const Text(
+            "Confirm",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: AppColors.white,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  static deleteCategoryDialog({required Function()? onConfirm}) {
+    return Get.defaultDialog(
+      barrierDismissible: false,
+      title: "Delete category?",
+      content: const Text("Do you really want to delete this category? "),
+      actions: [
+        MaterialButton(
+          onPressed: () => Get.back(),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          color: AppColors.grey,
+          child: const Text(
+            "Cancel",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: AppColors.black,
+            ),
+          ),
+        ),
+        MaterialButton(
+          onPressed: onConfirm,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          color: Colors.red,
+          child: const Text(
+            "Confirm",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: AppColors.white,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  static customDeleteDialog(
+      {required Function()? onConfirm, required String title, required String content}) {
+    return Get.defaultDialog(
+      barrierDismissible: false,
+      title: title,
+      content: Text(content),
+      actions: [
+        MaterialButton(
+          onPressed: () => Get.back(),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          color: AppColors.grey,
+          child: const Text(
+            "Cancel",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: AppColors.black,
+            ),
+          ),
+        ),
+        MaterialButton(
+          onPressed: onConfirm,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
           color: Colors.red,
           child: const Text(
             "Confirm",

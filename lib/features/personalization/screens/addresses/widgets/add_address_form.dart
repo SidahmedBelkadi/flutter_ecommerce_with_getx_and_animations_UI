@@ -108,6 +108,7 @@ class AddAddressForm extends GetView<AddressesController> {
           labelText: AppTexts.postalCode,
           prefixIcon: Iconsax.mobile,
           textEditingController: controller.postalCode,
+          textInputType: TextInputType.number,
           validator: (value) => AppValidation.validateInput(
             value: value!,
             type: InputTypes.postalCode,
