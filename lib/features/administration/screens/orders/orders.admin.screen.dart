@@ -15,20 +15,22 @@ class AdminOrdersScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AdminAppBar(
-        title: AppTexts.orders,
-        onPressed: () => Get.offNamed(AppRoutes.adminHome),
-      ),
-      endDrawer: const AdminstrationDrawer(),
-      body: Padding(
-        padding: EdgeInsets.all(AppSizes.defaultSpace.sp),
-        child: Column(
-          children: [
-            const SearchBox(hint: "Search for orders.."),
-            SizedBox(height: AppSizes.md.h),
-            const OrdersList(),
-          ],
+    return SafeArea(
+      child: Scaffold(
+        appBar: AdminAppBar(
+          title: AppTexts.orders,
+          onPressed: () => Get.offNamed(AppRoutes.adminHome),
+        ),
+        endDrawer: const AdminstrationDrawer(),
+        body: Padding(
+          padding: EdgeInsets.all(AppSizes.defaultSpace.sp),
+          child: Column(
+            children: [
+              const SearchBox(hint: "Search for orders.."),
+              SizedBox(height: AppSizes.md.h),
+              const OrdersList(),
+            ],
+          ),
         ),
       ),
     );

@@ -15,28 +15,30 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Get.put(ProfileController());
-    return Scaffold(
-      appBar: const CustomSimpleBackAppBar(
-        title: AppTexts.profile,
-      ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.all(AppSizes.defaultSpace.sp),
-          child: const SizedBox(
-            width: double.infinity,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // -- Profile Picture
-                ProfilePictureSection(),
+    return SafeArea(
+      child: Scaffold(
+        appBar: const CustomSimpleBackAppBar(
+          title: AppTexts.profile,
+        ),
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.all(AppSizes.defaultSpace.sp),
+            child: const SizedBox(
+              width: double.infinity,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // -- Profile Picture
+                  ProfilePictureSection(),
 
-                ProfileInformationsSection(),
-              ],
+                  ProfileInformationsSection(),
+                ],
+              ),
             ),
           ),
         ),
+        bottomNavigationBar: const DeleteAccount(),
       ),
-      bottomNavigationBar: const DeleteAccount(),
     );
   }
 }

@@ -10,9 +10,9 @@ class AccountScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
+    return SafeArea(
+      child: Scaffold(
+        body: SingleChildScrollView(
           child: SizedBox(
             width: double.infinity,
             child: Column(
@@ -25,8 +25,8 @@ class AccountScreen extends StatelessWidget {
             ),
           ),
         ),
+        bottomNavigationBar: const LogoutAndDeleteAccount(),
       ),
-      bottomNavigationBar: const LogoutAndDeleteAccount(),
     );
   }
 }

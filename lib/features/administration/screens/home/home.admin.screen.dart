@@ -13,14 +13,14 @@ class AdminHomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AdminAppBar(
-        title: AppTexts.administration,
-        onPressed: () => Get.offAllNamed(AppRoutes.account),
-      ),
-      endDrawer: const AdminstrationDrawer(),
-      body: SafeArea(
-        child: Padding(
+    return SafeArea(
+      child: Scaffold(
+        appBar: AdminAppBar(
+          title: AppTexts.administration,
+          onPressed: () => Get.offAllNamed(AppRoutes.account),
+        ),
+        endDrawer: const AdminstrationDrawer(),
+        body: Padding(
           padding: EdgeInsets.all(AppSizes.defaultSpace.sp),
           child: Center(
             child: Text(

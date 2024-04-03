@@ -9,18 +9,20 @@ class OrdersScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const CustomSimpleBackAppBar(title: "My Orders"),
-      body: Padding(
-        padding: EdgeInsets.all(AppSizes.defaultSpace.sp),
-        child: ListView.builder(
-          shrinkWrap: true,
-          itemCount: 10,
-          itemBuilder: (_, index) => const OrderItem(
-            title: "Apple Macbook Air M2 2023",
-            status: 'Pending',
-            orderDate: "14, Avril 2023",
-            shippingDate: "14, Avril 2023",
+    return SafeArea(
+      child: Scaffold(
+        appBar: const CustomSimpleBackAppBar(title: "My Orders"),
+        body: Padding(
+          padding: EdgeInsets.all(AppSizes.defaultSpace.sp),
+          child: ListView.builder(
+            shrinkWrap: true,
+            itemCount: 10,
+            itemBuilder: (_, index) => const OrderItem(
+              title: "Apple Macbook Air M2 2023",
+              status: 'Pending',
+              orderDate: "14, Avril 2023",
+              shippingDate: "14, Avril 2023",
+            ),
           ),
         ),
       ),

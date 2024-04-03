@@ -13,57 +13,59 @@ class CartScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const CustomSimpleBackAppBar(title: AppTexts.myCart),
-      bottomNavigationBar: Padding(
-        padding: EdgeInsets.all(AppSizes.md.sp),
-        child: AppElevatedButton(
-          text: "Checkout : 500 \$",
-          onPressed: () {},
-        ),
-      ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(
-            AppSizes.md,
-            AppSizes.xs,
-            AppSizes.md,
-            AppSizes.defaultSpace,
+    return SafeArea(
+      child: Scaffold(
+        appBar: const CustomSimpleBackAppBar(title: AppTexts.myCart),
+        bottomNavigationBar: Padding(
+          padding: EdgeInsets.all(AppSizes.md.sp),
+          child: AppElevatedButton(
+            text: "Checkout : 500 \$",
+            onPressed: () {},
           ),
-          child: Column(
-            children: [
-              AnimationLimiter(
-                child: ListView.builder(
-                  physics: const NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  itemBuilder: (_, index) => AnimationConfiguration.staggeredList(
-                    position: index,
-                    duration: const Duration(milliseconds: 500),
-                    child: SlideAnimation(
-                      horizontalOffset: 100.0,
-                      child: FadeInAnimation(
-                        child: Dismissible(
-                            background: Container(
-                              color: Colors.red,
-                              alignment: Alignment.centerRight,
-                              padding: EdgeInsets.symmetric(horizontal: AppSizes.defaultSpace.sp),
-                              child: const Icon(
-                                CupertinoIcons.delete,
-                                color: Colors.white,
+        ),
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(
+              AppSizes.md,
+              AppSizes.xs,
+              AppSizes.md,
+              AppSizes.defaultSpace,
+            ),
+            child: Column(
+              children: [
+                AnimationLimiter(
+                  child: ListView.builder(
+                    physics: const NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    itemBuilder: (_, index) => AnimationConfiguration.staggeredList(
+                      position: index,
+                      duration: const Duration(milliseconds: 500),
+                      child: SlideAnimation(
+                        horizontalOffset: 100.0,
+                        child: FadeInAnimation(
+                          child: Dismissible(
+                              background: Container(
+                                color: Colors.red,
+                                alignment: Alignment.centerRight,
+                                padding: EdgeInsets.symmetric(horizontal: AppSizes.defaultSpace.sp),
+                                child: const Icon(
+                                  CupertinoIcons.delete,
+                                  color: Colors.white,
+                                ),
                               ),
-                            ),
-                            key: ValueKey<int>(index),
-                            onDismissed: (direction) {
-                              //   Todo: Implement logic here
-                            },
-                            child: const ProductCartItem()),
+                              key: ValueKey<int>(index),
+                              onDismissed: (direction) {
+                                //   Todo: Implement logic here
+                              },
+                              child: const ProductCartItem()),
+                        ),
                       ),
                     ),
+                    itemCount: 8,
                   ),
-                  itemCount: 8,
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

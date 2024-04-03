@@ -19,48 +19,50 @@ class AddressesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Get.put(AddressesController());
-    return Scaffold(
-      appBar: const CustomSimpleBackAppBar(
-        title: AppTexts.addresses,
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () =>
-            AppBottomSheet.customFormBottomSheet(context: context, form: const AddAddressForm()),
-        backgroundColor: AppColors.primary,
-        foregroundColor: AppColors.white,
-        child: const Icon(Iconsax.add),
-      ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.fromLTRB(
-            AppSizes.defaultSpace.sp,
-            0,
-            AppSizes.defaultSpace.sp,
-            AppSizes.defaultSpace.sp,
-          ),
-          child: AnimationLimiter(
-            child: Column(
-              children: AnimationConfiguration.toStaggeredList(
-                duration: const Duration(milliseconds: 375),
-                childAnimationBuilder: (widget) => SlideAnimation(
-                  horizontalOffset: 50.0,
-                  child: FadeInAnimation(
-                    child: widget,
+    return SafeArea(
+      child: Scaffold(
+        appBar: const CustomSimpleBackAppBar(
+          title: AppTexts.addresses,
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () =>
+              AppBottomSheet.customFormBottomSheet(context: context, form: const AddAddressForm()),
+          backgroundColor: AppColors.primary,
+          foregroundColor: AppColors.white,
+          child: const Icon(Iconsax.add),
+        ),
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(
+              AppSizes.defaultSpace.sp,
+              0,
+              AppSizes.defaultSpace.sp,
+              AppSizes.defaultSpace.sp,
+            ),
+            child: AnimationLimiter(
+              child: Column(
+                children: AnimationConfiguration.toStaggeredList(
+                  duration: const Duration(milliseconds: 375),
+                  childAnimationBuilder: (widget) => SlideAnimation(
+                    horizontalOffset: 50.0,
+                    child: FadeInAnimation(
+                      child: widget,
+                    ),
                   ),
+                  children: [
+                    const AddressContainer(
+                      name: AppTexts.myName,
+                      number: AppTexts.myPhone,
+                      address: AppTexts.myAddress,
+                    ),
+                    const AddressContainer(
+                      name: AppTexts.myName,
+                      number: AppTexts.myPhone,
+                      address: AppTexts.myAddress,
+                      isSelected: true,
+                    ),
+                  ],
                 ),
-                children: [
-                  const AddressContainer(
-                    name: AppTexts.myName,
-                    number: AppTexts.myPhone,
-                    address: AppTexts.myAddress,
-                  ),
-                  const AddressContainer(
-                    name: AppTexts.myName,
-                    number: AppTexts.myPhone,
-                    address: AppTexts.myAddress,
-                    isSelected: true,
-                  ),
-                ],
               ),
             ),
           ),

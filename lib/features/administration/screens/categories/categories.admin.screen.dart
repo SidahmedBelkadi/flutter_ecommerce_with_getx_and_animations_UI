@@ -13,15 +13,17 @@ class AdminCategoriesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AdminAppBar(
-        title: AppTexts.categories,
-        onPressed: () => Get.offNamed(AppRoutes.adminHome),
-      ),
-      endDrawer: const AdminstrationDrawer(),
-      body: Padding(
-        padding: EdgeInsets.all(AppSizes.defaultSpace.sp),
-        child: const CategoriesList(),
+    return SafeArea(
+      child: Scaffold(
+        appBar: AdminAppBar(
+          title: AppTexts.categories,
+          onPressed: () => Get.offNamed(AppRoutes.adminHome),
+        ),
+        endDrawer: const AdminstrationDrawer(),
+        body: Padding(
+          padding: EdgeInsets.all(AppSizes.defaultSpace.sp),
+          child: const CategoriesList(),
+        ),
       ),
     );
   }
